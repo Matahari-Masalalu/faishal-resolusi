@@ -1,6 +1,9 @@
-Faishal Resolusi
--Konsisten belajar minimal sehari 2 materi
--Semester depan bisa freelance sebagai web devoloper
--Jago frontend ataupun backend(fullstack)
--Bisa mendapat uang dari freelance
--Bisa mendapatkan niali bagus
+Semester satu(fullstack web devoloper)
+  ^Bisa vuejs/reactjs
+  ^Bisa data basenya nodejs/mysql
+  ^Bisa banyak framework
+  ^+ i like django
+
+Semester dua(Machine Learning)
+Semester tiga(Bisa expert di numpy dan jadi data saintist)
+semester empat(Bisa AI)
