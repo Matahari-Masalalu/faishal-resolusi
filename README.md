@@ -129,33 +129,23 @@ y_pred = nilai prediksi
 
 MSE memberikan ukuran kesalahan prediksi model. Nilai MSE yang rendah menandakan bahwa model memiliki kesalahan prediksi yang kecil dan performa yang baik. Sebaliknya, nilai MSE yang tinggi menandakan bahwa model memiliki kesalahan prediksi yang besar dan performa yang buruk.
 
-Hasil proyek berdasarkan metrik MSE:
-
-Berikut adalah hasil MSE dari ketiga model yang telah dilatih:
-
-![Cuplikan layar 2024-10-20 155841](https://github.com/user-attachments/assets/2882be6b-3c61-4136-9818-468fec90f31a)
-
-Model	Train MSE	Test MSE
-
-- KNN	164.1	205.2
-- Random Forest	17.6	182.2
-- Boosting	28.3	184.1
-
-Grafik dari MSE tiap-tiap model
+Hasil proyek berdasarkan metrik MSE: Berikut adalah hasil MSE dari ketiga model yang telah dilatih:
 
 ![Cuplikan layar 2024-10-20 163337](https://github.com/user-attachments/assets/1770f22f-fedb-4c04-aaa2-56c69ae01979)
 
-Berdasarkan hasil MSE, dapat disimpulkan bahwa:
+![Cuplikan layar 2024-10-20 155841](https://github.com/user-attachments/assets/2882be6b-3c61-4136-9818-468fec90f31a)
 
 Grafik menunjukkan skor MSE untuk berbagai model regresi. Model dengan skor MSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor MSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
 
 Grafik juga menunjukkan bahwa sebagian besar model memiliki performa yang lebih baik pada data training daripada data testing. Ini menunjukkan bahwa beberapa model mungkin mengalami overfitting.
 
-Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+Berdasarkan hasil MSE, dapat disimpulkan bahwa:
 
-Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujian, dengan nilai MSE yang relatif rendah pada data pengujian.
+- Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
-Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+- Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujian, dengan nilai MSE yang relatif rendah pada data pengujian.
+
+- Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
 Secara keseluruhan, model Random Forest memiliki performa yang paling baik berdasarkan metrik MSE. Hal ini karena model Random Forest mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model KNN dan Boosting.
 
