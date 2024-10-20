@@ -113,11 +113,13 @@ karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolo
 
 Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
 
-- Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+### Data Transformation 
+Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+### Data Splitting  
+Data dibagi menjadi set pelatihan dan set pengujian menggunakan train_test_split dari sklearn.model_selection, Fitur Close dihapus dari dataset untuk digunakan sebagai target, dan dataset dibagi dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
 
-- Data Splitting : Data dibagi menjadi set pelatihan dan set pengujian menggunakan train_test_split dari sklearn.model_selection, Fitur Close dihapus dari dataset untuk digunakan sebagai target, dan dataset dibagi dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
-
-- Data Standarization : Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
+### Data Standarization  
+Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
 
 Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
 
