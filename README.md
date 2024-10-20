@@ -3,7 +3,7 @@
 ## Domain Proyek
 Proyek ini bertujuan untuk membangun model machine learning untuk memprediksi harga penutupan (Close) Bitcoin (BTC) dengan menggunakan dataset harga Bitcoin (BTC) dalam USD. Dataset ini memuat informasi mengenai harga pembukaan (Open), harga tertinggi (High), harga terendah (Low), harga penutupan (Close), harga penutupan yang disesuaikan (Adj Close), dan volume perdagangan (Volume) pada periode waktu tertentu. Model prediksi yang dihasilkan diharapkan dapat membantu investor untuk membuat keputusan investasi yang lebih baik dan mengoptimalkan keuntungan.
 
-- Permintaan yang semakin tinggi untuk cryptocurrency, khususnya Bitcoin, menyebabkan fluktuasi harga yang sangat tinggi dan sulit diprediksi. Untuk meminimalkan risiko kerugian, para investor membutuhkan alat bantu yang akurat untuk memprediksi pergerakan harga Bitcoin. Model machine learning yang akurat dapat membantu investor untuk memprediksi pergerakan harga Bitcoin dan meminimalkan risiko kerugian.
+Permintaan yang semakin tinggi untuk cryptocurrency, khususnya Bitcoin, menyebabkan fluktuasi harga yang sangat tinggi dan sulit diprediksi. Untuk meminimalkan risiko kerugian, para investor membutuhkan alat bantu yang akurat untuk memprediksi pergerakan harga Bitcoin. Model machine learning yang akurat dapat membantu investor untuk memprediksi pergerakan harga Bitcoin dan meminimalkan risiko kerugian.
 
 ## Business Understanding
 
