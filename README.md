@@ -147,9 +147,9 @@ Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah 
 
 Penjelassan mengenai metrik yang digunakan:
 
-MSE menghitung rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
+RMS menghitung akar rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
 
-![Cuplikan layar 2024-10-20 155611](https://github.com/user-attachments/assets/636a0d1b-a371-45f1-af31-b05a962d3e74)
+![rmse-1](https://github.com/user-attachments/assets/196f7b57-446f-41ff-800a-6fd204729256)
 
 Dimana:
 
@@ -163,9 +163,7 @@ MSE memberikan ukuran kesalahan prediksi model. Nilai MSE yang rendah menandakan
 
 Hasil proyek berdasarkan metrik MSE: Berikut adalah hasil MSE dari ketiga model yang telah dilatih:
 
-![Cuplikan layar 2024-10-20 163337](https://github.com/user-attachments/assets/1770f22f-fedb-4c04-aaa2-56c69ae01979)
-
-![Cuplikan layar 2024-10-20 155841](https://github.com/user-attachments/assets/2882be6b-3c61-4136-9818-468fec90f31a)
+![Cuplikan layar 2024-10-20 231344](https://github.com/user-attachments/assets/221ce827-812d-4c20-af26-b08095dbeade)
 
 Grafik menunjukkan skor MSE untuk berbagai model regresi. Model dengan skor MSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor MSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
 
