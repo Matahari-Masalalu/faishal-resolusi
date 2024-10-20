@@ -157,14 +157,6 @@ Parameter yang digunakan dalam Model GRU adalah sebagai berikut:
 
 ## Evaluation
 
-### Prediksi harga bitcoin menggunakan model LSTM
-
-![Cuplikan layar 2024-10-20 232735](https://github.com/user-attachments/assets/26416bba-5b5d-4415-9c9a-ee9da6423a8c)
-
-### Prediksi harga bitcoin menggunakan model GRU
-
-![Cuplikan layar 2024-10-20 232746](https://github.com/user-attachments/assets/be5e81d4-96e9-480f-9e01-7e72fa8227e1)
-
 Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah Mean Squared Error (MSE). MSE merupakan metrik yang umum digunakan untuk mengevaluasi model regresi.
 
 Penjelassan mengenai metrik yang digunakan:
@@ -196,6 +188,14 @@ Berdasarkan hasil rMSE, dapat disimpulkan bahwa:
 - Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujian, dengan nilai MSE yang relatif rendah pada data pengujian.
 
 - Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+
+### Prediksi harga bitcoin menggunakan model LSTM
+
+![Cuplikan layar 2024-10-20 232735](https://github.com/user-attachments/assets/26416bba-5b5d-4415-9c9a-ee9da6423a8c)
+
+### Prediksi harga bitcoin menggunakan model GRU
+
+![Cuplikan layar 2024-10-20 232746](https://github.com/user-attachments/assets/be5e81d4-96e9-480f-9e01-7e72fa8227e1)
 
 Secara keseluruhan, model LSTM memiliki performa yang paling baik berdasarkan metrik RMSE. Hal ini karena model LSTM memiliki Kemampuan untuk menangani deret waktu, Model LSTM dirancang khusus untuk bekerja dengan data deret waktu. Mereka dapat mengingat informasi dari langkah waktu sebelumnya, yang memungkinkan mereka untuk belajar pola temporal yang rumit.
 
