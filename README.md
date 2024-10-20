@@ -101,6 +101,8 @@ Matriks korelasi sangat berguna dalam analisis data, karena dapat membantu kita 
 
 ## Data Preparation
 
+Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
+
 ### Data Cleaning
 
 #### 1. Menghapus duplikat dan nan
@@ -110,8 +112,6 @@ untuk mengecek kemabli data duplikat dan data kosong, pada tahap ini data yang d
 karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolom 'Volume', maka kita bisa menghapusnya dengan metode IQR.
 
 Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
-
-Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
 - Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
 
