@@ -61,6 +61,20 @@ High and Low Value for October 2023
 
 ![Cuplikan layar 2024-10-20 161640](https://github.com/user-attachments/assets/10219937-c3dd-43be-8fce-bb5ee0b62740)
 
+Correlation Matrik untuk Fitur Numerik
+
+![Cuplikan layar 2024-10-20 161935](https://github.com/user-attachments/assets/e38793d6-7a24-4348-8a84-1db8400b2cba)
+
+Berdasarkan hasil korelasi numerik, korelasi antara fitur-fitur pada dataset tersebut berkorelasi sangat kuat. Dapat dilihat bahwa korelasi positif dan mendekati 1. Hal ini menunjukkan bahwa fitur-fitur tersebut cenderung bergerak searah.
+
+Contohnya, korelasi antara kolom 'Open' dan 'High' mendekati 1, yang berarti harga pembukaan dan harga tertinggi cenderung bergerak bersamaan.
+
+Hubungan antara volume dengan fitur lain seperti open, high, low, close dan adj close adalah positif dan lemah.
+
+Volume memiliki korelasi yang rendah dengan fitur lain seperti open, high, low, close dan adj close. Ini menunjukkan bahwa volume tidak secara langsung terkait dengan harga saham.
+
+Volume cenderung lebih terkait dengan sentimen pasar atau aktivitas perdagangan daripada dengan harga itu sendiri. Seiring dengan meningkatnya volume, harga saham mungkin cenderung naik atau turun, tetapi hubungan ini tidak selalu konsisten.
+
 
 ## Data Preparation
 
