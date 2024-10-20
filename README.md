@@ -11,23 +11,22 @@ Permintaan yang semakin tinggi untuk cryptocurrency, khususnya Bitcoin, menyebab
 
 ### Problem Statements
 
-- Pernyataan Masalah 1: Bagaimana merancang model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi?
-- Pernyataan Masalah 2: Bagaimana mengoptimalkan performa model machine learning dengan teknik data preparation dan hyperparameter tuning?
+- Pernyataan Masalah : Bagaimana merancang model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi?
 
 ### Goals
-- Jawaban pernyataan masalah 1: Membangun model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi, diukur dengan metrik Mean Squared Error (MSE).
-- Jawaban pernyataan masalah 2: Mengoptimalkan performa model machine learning dengan teknik data preparation dan hyperparameter tuning sehingga nilai MSE pada data testing lebih kecil.
+- Jawaban pernyataan masalah : Membangun model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi, diukur dengan metrik Mean Squared Error (MSE).
 ### Solution Statement
-Penggunaan Multiple Algoritma Machine Learning: Proyek ini akan menggunakan tiga algoritma machine learning, yaitu K-Nearest Neighbors (KNN), Random Forest, dan Boosting (AdaBoost). Ketiga algoritma ini dipilih karena kemampuannya yang berbeda dalam menangani data dengan karakteristik yang kompleks, sehingga diharapkan dapat memberikan hasil yang optimal.
-Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meningkatkan kualitas data dan performa model, seperti:
+- Penggunaan Multiple Algoritma Machine Learning: Proyek ini akan menggunakan tiga algoritma machine learning, yaitu K-Nearest Neighbors (KNN), Random Forest, dan Boosting (AdaBoost). Ketiga algoritma ini dipilih karena kemampuannya yang berbeda dalam menangani data dengan karakteristik yang kompleks, sehingga diharapkan dapat memberikan hasil yang optimal.
+- Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meningkatkan kualitas data dan performa model, seperti:
 Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik dengan mengekstrak informasi tahun, bulan, hari, dan hari dalam seminggu.
 
 ## Data Understanding
 
 sumber/referensi : https://www.kaggle.com/datasets/gallo33henrique/bitcoin-btc-usd-stock-dataset
+
 sumber/referensi : https://www.kaggle.com/code/njugushedit/btc-usd-market-analysis
 
-Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle atau Google Drive. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023. Dataset ini memiliki 2.991 baris dan 7 kolom, tidak ada nilai missing value dan data duplikat pada semua kolom atau baris, tetapi pada kolom volume masih terdapat outliner yang dituntukan pada gambar dibawah ini.
+Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023. Dataset ini memiliki 2836 baris dan 7 kolom, tidak ada nilai missing value dan data duplikat pada semua kolom atau baris, tetapi pada kolom volume masih terdapat outliner yang dituntukan pada gambar dibawah ini.
 
 ![image](https://github.com/user-attachments/assets/2f31a20d-b31f-4d80-83b4-9e0fdce20103)
 
@@ -42,6 +41,15 @@ Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
 - Volume: Volume perdagangan Bitcoin pada hari tersebut.
 
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
+
+## Data Cleaning
+### 1. Menghapus duplikat dan nan
+untuk mengecek kemabli data duplikat dan data kosong, pada tahap ini data yang duplikat dan nan akan dihapus
+
+### 2. Menghapus outilner
+karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolom 'Volume', maka kita bisa menghapusnya dengan metode IQR.
+
+Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
 
 ## Data visualization
 
