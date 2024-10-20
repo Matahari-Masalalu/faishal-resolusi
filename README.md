@@ -38,30 +38,17 @@ Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
 
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
 
-## Data Cleaning
-### 1. Menghapus duplikat dan nan
-untuk mengecek kemabli data duplikat dan data kosong, pada tahap ini data yang duplikat dan nan akan dihapus
-
-### 2. Menghapus outilner
-karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolom 'Volume', maka kita bisa menghapusnya dengan metode IQR.
-
-Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
-
-## Data visualization
-
-![Cuplikan layar 2024-10-20 161127](https://github.com/user-attachments/assets/28cce4a0-8db3-43df-8b5f-8ce8b65c0fce)
-
 ## Exploratory Data Analysis
 
-- Total Volume Trader by Year
-- 
+### Total Volume Trader by Year
+  
 "Total Volume Trader by Year" merujuk pada analisis jumlah total volume perdagangan yang dilakukan oleh trader dalam satu tahun tertentu. Volume perdagangan adalah ukuran seberapa banyak aset, dalam hal ini Bitcoin, yang diperdagangkan dalam periode waktu tertentu. 
 
 Analisis ini penting karena memberikan wawasan tentang aktivitas pasar dan minat investor terhadap Bitcoin dari tahun ke tahun. Dengan menghitung total volume perdagangan per tahun, kita dapat mengidentifikasi tren, pola, dan perubahan dalam perilaku trader. 
 
 ![Cuplikan layar 2024-10-20 161335](https://github.com/user-attachments/assets/3a115df8-8f77-4c58-964c-9c860e53c5e1)
 
-- Total Volume Trader by Month for Each Year
+### Total Volume Trader by Month for Each Year
 
 "Total Volume Trader by Month for Each Year" merujuk pada pengukuran total volume perdagangan yang dilakukan oleh trader dalam setiap bulan selama satu tahun tertentu. Ini biasanya digunakan untuk menganalisis aktivitas perdagangan, tren pasar, dan performa trader dari waktu ke waktu.
 
@@ -69,7 +56,7 @@ Dengan melihat data ini, kita bisa mendapatkan wawasan tentang kapan volume perd
 
 ![Cuplikan layar 2024-10-20 161422](https://github.com/user-attachments/assets/454289a1-df2b-48e5-b9cb-e9a98aaa76ed)
 
-- High and Low Value Over time
+### High and Low Value Over time
 
 High and Low Value Over Time" dalam konteks Bitcoin merujuk pada fluktuasi harga Bitcoin dari waktu ke waktu. Bitcoin, sebagai mata uang kripto, mengalami perubahan nilai yang signifikan, dipengaruhi oleh berbagai faktor seperti permintaan pasar, berita ekonomi, regulasi, dan sentimen investor.
 
@@ -79,15 +66,15 @@ Memahami pola "high and low value over time" sangat penting bagi para investor d
 
 ![Cuplikan layar 2024-10-20 161701](https://github.com/user-attachments/assets/d7b7567c-b536-4a4f-8cae-107e9ff0f6d8)
 
-High and Low Value for 2023
+### High and Low Value for 2023
 
 ![Cuplikan layar 2024-10-20 161608](https://github.com/user-attachments/assets/0179068c-ceee-4743-a1dd-70ac9c614b16)
 
-High and Low Value for October 2023
+### High and Low Value for October 2023
 
 ![Cuplikan layar 2024-10-20 161640](https://github.com/user-attachments/assets/10219937-c3dd-43be-8fce-bb5ee0b62740)
 
-- Correlation Matrik untuk Fitur Numerik
+### Correlation Matrik untuk Fitur Numerik
 
 Dalam konteks fitur numerik, matriks ini membantu kita memahami seberapa kuat dan dalam arah mana variabel-variabel tersebut saling berhubungan.
 
@@ -107,8 +94,22 @@ Matriks korelasi sangat berguna dalam analisis data, karena dapat membantu kita 
 
 - Volume cenderung lebih terkait dengan sentimen pasar atau aktivitas perdagangan daripada dengan harga itu sendiri. Seiring dengan meningkatnya volume, harga saham mungkin cenderung naik atau turun, tetapi hubungan ini tidak selalu konsisten.
 
+## Data visualization
+
+![Cuplikan layar 2024-10-20 161127](https://github.com/user-attachments/assets/28cce4a0-8db3-43df-8b5f-8ce8b65c0fce)
+
 
 ## Data Preparation
+
+### Data Cleaning
+
+#### 1. Menghapus duplikat dan nan
+untuk mengecek kemabli data duplikat dan data kosong, pada tahap ini data yang duplikat dan nan akan dihapus
+
+#### 2. Menghapus outilner
+karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolom 'Volume', maka kita bisa menghapusnya dengan metode IQR.
+
+Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
 
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
