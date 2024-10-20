@@ -55,15 +55,29 @@ Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan ku
 
 ## Exploratory Data Analysis
 
-Total Volume Trader by Year
+- Total Volume Trader by Year
+- 
+"Total Volume Trader by Year" merujuk pada analisis jumlah total volume perdagangan yang dilakukan oleh trader dalam satu tahun tertentu. Volume perdagangan adalah ukuran seberapa banyak aset, dalam hal ini Bitcoin, yang diperdagangkan dalam periode waktu tertentu. 
+
+Analisis ini penting karena memberikan wawasan tentang aktivitas pasar dan minat investor terhadap Bitcoin dari tahun ke tahun. Dengan menghitung total volume perdagangan per tahun, kita dapat mengidentifikasi tren, pola, dan perubahan dalam perilaku trader. 
 
 ![Cuplikan layar 2024-10-20 161335](https://github.com/user-attachments/assets/3a115df8-8f77-4c58-964c-9c860e53c5e1)
 
-Total Volume Trader by Month for Each Year
+- Total Volume Trader by Month for Each Year
+
+"Total Volume Trader by Month for Each Year" merujuk pada pengukuran total volume perdagangan yang dilakukan oleh trader dalam setiap bulan selama satu tahun tertentu. Ini biasanya digunakan untuk menganalisis aktivitas perdagangan, tren pasar, dan performa trader dari waktu ke waktu.
+
+Dengan melihat data ini, kita bisa mendapatkan wawasan tentang kapan volume perdagangan meningkat atau menurun, yang bisa dipengaruhi oleh berbagai faktor seperti berita ekonomi, peristiwa pasar, atau perubahan dalam kebijakan. Data ini sering kali disajikan dalam bentuk grafik atau tabel untuk memudahkan analisis.
 
 ![Cuplikan layar 2024-10-20 161422](https://github.com/user-attachments/assets/454289a1-df2b-48e5-b9cb-e9a98aaa76ed)
 
-High and Low Value Over time
+- High and Low Value Over time
+
+High and Low Value Over Time" dalam konteks Bitcoin merujuk pada fluktuasi harga Bitcoin dari waktu ke waktu. Bitcoin, sebagai mata uang kripto, mengalami perubahan nilai yang signifikan, dipengaruhi oleh berbagai faktor seperti permintaan pasar, berita ekonomi, regulasi, dan sentimen investor.
+
+Ketika harga Bitcoin mencapai titik tertinggi (high), ini biasanya menunjukkan minat yang tinggi dari investor dan mungkin juga adanya berita positif yang mendukung. Sebaliknya, saat harga turun ke titik terendah (low), ini bisa disebabkan oleh faktor negatif seperti berita buruk, penjualan besar-besaran, atau ketidakpastian pasar.
+
+Memahami pola "high and low value over time" sangat penting bagi para investor dan trader untuk membuat keputusan yang lebih baik dalam berinvestasi di Bitcoin.
 
 ![Cuplikan layar 2024-10-20 161701](https://github.com/user-attachments/assets/d7b7567c-b536-4a4f-8cae-107e9ff0f6d8)
 
@@ -75,7 +89,13 @@ High and Low Value for October 2023
 
 ![Cuplikan layar 2024-10-20 161640](https://github.com/user-attachments/assets/10219937-c3dd-43be-8fce-bb5ee0b62740)
 
-Correlation Matrik untuk Fitur Numerik
+- Correlation Matrik untuk Fitur Numerik
+
+Dalam konteks fitur numerik, matriks ini membantu kita memahami seberapa kuat dan dalam arah mana variabel-variabel tersebut saling berhubungan.
+
+Setiap elemen dalam matriks korelasi menunjukkan koefisien korelasi, yang biasanya berkisar antara -1 hingga 1. Nilai 1 menunjukkan hubungan positif sempurna, di mana ketika satu variabel meningkat, variabel lainnya juga meningkat. Nilai -1 menunjukkan hubungan negatif sempurna, di mana ketika satu variabel meningkat, variabel lainnya menurun. Nilai 0 menunjukkan tidak ada hubungan linear antara variabel-variabel tersebut.
+
+Matriks korelasi sangat berguna dalam analisis data, karena dapat membantu kita mengidentifikasi fitur-fitur yang mungkin saling mempengaruhi, yang pada gilirannya dapat memandu kita dalam pemodelan dan pengambilan keputusan.
 
 ![Cuplikan layar 2024-10-20 161935](https://github.com/user-attachments/assets/e38793d6-7a24-4348-8a84-1db8400b2cba)
 
