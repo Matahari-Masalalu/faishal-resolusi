@@ -1,5 +1,7 @@
 # Laporan Proyek Machine Learning - Faishal Anwar Haysim
 
+## Prediksi Harga Bitcoin dengan Machine Learning
+
 ## Domain Proyek
 Proyek ini bertujuan untuk membangun model machine learning untuk memprediksi harga penutupan (Close) Bitcoin (BTC) dengan menggunakan dataset harga Bitcoin (BTC) dalam USD. Dataset ini memuat informasi mengenai harga pembukaan (Open), harga tertinggi (High), harga terendah (Low), harga penutupan (Close), harga penutupan yang disesuaikan (Adj Close), dan volume perdagangan (Volume) pada periode waktu tertentu. Model prediksi yang dihasilkan diharapkan dapat membantu investor untuk membuat keputusan investasi yang lebih baik dan mengoptimalkan keuntungan.
 
