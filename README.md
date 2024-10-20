@@ -25,19 +25,30 @@ Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik den
 Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle atau Google Drive. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023.
 
 Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
+
 Date: Tanggal data yang direkam (dalam format YYYY-MM-DD).
+
 Open: Harga pembukaan Bitcoin pada hari tersebut.
+
 High: Harga tertinggi Bitcoin pada hari tersebut.
+
 Low: Harga terendah Bitcoin pada hari tersebut.
+
 Close: Harga penutupan Bitcoin pada hari tersebut.
+
 Adj Close: Harga penutupan yang disesuaikan untuk peristiwa seperti dividen atau pemisahan saham.
+
 Volume: Volume perdagangan Bitcoin pada hari tersebut.
+
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
 
-Data Preparation
+## Data Preparation
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
 Data Cleaning: Pada tahap ini, dilakukan pengecekan terhadap data yang tidak valid seperti nilai 0 pada kolom Open, High, Low, Close, dan Volume. Dataset juga dicek untuk keberadaan data duplikat dan nilai yang hilang (NaN).
+
 Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+
 Data Scaling: Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler untuk menormalkan nilai fitur dan meningkatkan performa model.
+
 Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
