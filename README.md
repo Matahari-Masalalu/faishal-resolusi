@@ -96,11 +96,11 @@ Correlation Matrik untuk Fitur Numerik
 
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
-- Data Cleaning: Pada tahap ini, dilakukan pengecekan terhadap data yang tidak valid seperti nilai 0 pada kolom Open, High, Low, Close, dan Volume. Dataset juga dicek untuk keberadaan data duplikat dan nilai yang hilang (NaN).
-
 - Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
 
-- Data Scaling: Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler untuk menormalkan nilai fitur dan meningkatkan performa model.
+- Data Splitting : Data dibagi menjadi set pelatihan dan set pengujian menggunakan train_test_split dari sklearn.model_selection, Fitur Close dihapus dari dataset untuk digunakan sebagai target, dan dataset dibagi dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
+
+- Data Standarization : Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
 
 Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
 
@@ -161,6 +161,10 @@ Berdasarkan hasil MSE, dapat disimpulkan bahwa:
 - Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
 Secara keseluruhan, model Random Forest memiliki performa yang paling baik berdasarkan metrik MSE. Hal ini karena model Random Forest mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model KNN dan Boosting.
+
+## Dampak Model terhadap Pemahaman Bisnis:
+
+Hasil evaluasi model menggunakan Mean Squared Error (MSE) menunjukkan bahwa model dapat menjawab pernyataan masalah yang diajukan di awal. Tujuan penelitian ini telah tercapai, karena model Random Forest, yang menunjukkan performa terbaik, memberikan akurasi prediksi yang memadai untuk harga penutupan Bitcoin. Informasi ini sangat berharga bagi investor yang ingin memprediksi pergerakan harga Bitcoin di masa depan.
 
 ## Kesimpulan
 
