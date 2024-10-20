@@ -115,31 +115,45 @@ Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan ku
 
 ### Data Transformation 
 Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+
 ### Data Splitting  
 Data dibagi menjadi set pelatihan dan set pengujian menggunakan train_test_split dari sklearn.model_selection, Fitur Close dihapus dari dataset untuk digunakan sebagai target, dan dataset dibagi dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
 
 ### Data Standarization  
-Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
+Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan MinMaxScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
 
 Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
 
 ## Modeling
 
-Pada proyek ini, tiga algoritma machine learning digunakan untuk memprediksi harga penutupan Bitcoin (BTC), yaitu:
+Pada proyek ini, dua algoritma machine learning digunakan untuk memprediksi harga penutupan Bitcoin (BTC), yaitu:
 
-- K-Nearest Neighbors (KNN): Model KNN bekerja dengan mencari k data terdekat dari data yang ingin diprediksi. Prediksi kemudian didasarkan pada rata-rata dari k data terdekat tersebut. Model ini mudah dipahami dan diterapkan, tetapi dapat menjadi tidak efisien untuk dataset yang besar.
+Model LSTM adalah model jaringan saraf rekursi yang digunakan untuk memprediksi nilai masa depan berdasarkan data deret waktu. Model ini bekerja dengan mempelajari pola dan tren dalam data masa lalu dan menggunakannya untuk membuat prediksi untuk masa depan. Model LSTM memiliki beberapa lapisan LSTM yang saling berhubungan. Setiap lapisan LSTM mengambil input dari lapisan sebelumnya dan menghasilkan output yang merupakan prediksi untuk langkah waktu selanjutnya.
 
-- Random Forest: Model Random Forest merupakan ensemble learning yang terdiri dari banyak pohon keputusan. Setiap pohon dilatih dengan subset data dan variabel acak. Prediksi akhir dilakukan dengan menggabungkan prediksi dari setiap pohon. Model ini memiliki akurasi yang tinggi dan mampu menangani data yang kompleks, tetapi membutuhkan waktu yang lebih lama untuk dilatih.
+Parameter yang digunakan dalam Model LSTM adalah sebagai berikut:
 
-- AdaBoost (Adaptive Boosting): Model AdaBoost merupakan algoritma boosting yang menggabungkan banyak model yang lemah untuk membentuk model yang kuat. Model yang lemah diberi bobot lebih tinggi jika prediksinya benar. Model ini memiliki akurasi yang tinggi dan mampu menangani data yang kompleks, tetapi dapat mengalami overfitting jika tidak diatur dengan baik.
+- units: Jumlah unit dalam setiap lapisan LSTM.
+- return_sequences: Menentukan apakah setiap lapisan LSTM menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir.
+- input_shape: Bentuk input data.
+- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting.
+- optimizer: Algoritma optimisasi yang digunakan untuk melatih model.
+- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model.
+- epochs: Jumlah iterasi pelatihan.
+- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan.
 
-Pada proses pelatihan model, parameter yang digunakan adalah sebagai berikut:
 
-- KNN: n_neighbors=10. Parameter ini menentukan jumlah tetangga terdekat yang digunakan untuk memprediksi nilai target.
+Model GRU adalah model jaringan saraf rekursi yang mirip dengan Model LSTM, tetapi memiliki struktur yang lebih sederhana. Model GRU memiliki dua gerbang, yaitu gerbang pembaruan dan gerbang penataan, yang mengontrol aliran informasi dalam model.
 
-- Random Forest: n_estimators=50, max_depth=16, random_state=55, n_jobs=-1. Parameter n_estimators menentukan jumlah pohon dalam Random Forest, max_depth menentukan kedalaman maksimal pohon, random_state digunakan untuk inisialisasi random number generator, dan n_jobs menentukan jumlah core CPU yang digunakan untuk pelatihan.
+Parameter yang digunakan dalam Model GRU adalah sebagai berikut:
 
-- AdaBoost: learning_rate=0.05, random_state=55. Parameter learning_rate menentukan besarnya pengaruh setiap model yang lemah pada model akhir, dan random_state digunakan untuk inisialisasi random number generator.
+- units: Jumlah unit dalam setiap lapisan GRU.
+- return_sequences: Menentukan apakah setiap lapisan GRU menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir.
+- input_shape: Bentuk input data.
+- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting.
+- optimizer: Algoritma optimisasi yang digunakan untuk melatih model.
+- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model.
+- epochs: Jumlah iterasi pelatihan.
+- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan.
 
 ## Evaluation
 
@@ -147,7 +161,7 @@ Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah 
 
 Penjelassan mengenai metrik yang digunakan:
 
-RMS menghitung akar rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
+RMSE menghitung akar rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
 
 ![rmse-1](https://github.com/user-attachments/assets/196f7b57-446f-41ff-800a-6fd204729256)
 
@@ -159,17 +173,15 @@ yi = nilai sebenarnya
 
 y_pred = nilai prediksi
 
-MSE memberikan ukuran kesalahan prediksi model. Nilai MSE yang rendah menandakan bahwa model memiliki kesalahan prediksi yang kecil dan performa yang baik. Sebaliknya, nilai MSE yang tinggi menandakan bahwa model memiliki kesalahan prediksi yang besar dan performa yang buruk.
+RMSE memberikan ukuran kesalahan prediksi model. Nilai MSE yang rendah menandakan bahwa model memiliki kesalahan prediksi yang kecil dan performa yang baik. Sebaliknya, nilai MSE yang tinggi menandakan bahwa model memiliki kesalahan prediksi yang besar dan performa yang buruk.
 
 Hasil proyek berdasarkan metrik MSE: Berikut adalah hasil MSE dari ketiga model yang telah dilatih:
 
 ![Cuplikan layar 2024-10-20 231344](https://github.com/user-attachments/assets/221ce827-812d-4c20-af26-b08095dbeade)
 
-Grafik menunjukkan skor MSE untuk berbagai model regresi. Model dengan skor MSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor MSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
+Grafik menunjukkan skor MSE untuk berbagai model time series. Model dengan skor RMSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor MSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
 
-Grafik juga menunjukkan bahwa sebagian besar model memiliki performa yang lebih baik pada data training daripada data testing. Ini menunjukkan bahwa beberapa model mungkin mengalami overfitting.
-
-Berdasarkan hasil MSE, dapat disimpulkan bahwa:
+Berdasarkan hasil rMSE, dapat disimpulkan bahwa:
 
 - Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
@@ -177,11 +189,11 @@ Berdasarkan hasil MSE, dapat disimpulkan bahwa:
 
 - Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
-Secara keseluruhan, model Random Forest memiliki performa yang paling baik berdasarkan metrik MSE. Hal ini karena model Random Forest mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model KNN dan Boosting.
+Secara keseluruhan, model LSTM memiliki performa yang paling baik berdasarkan metrik RMSE. Hal ini karena model LSTM mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model lainnya.
 
 ## Dampak Model terhadap Pemahaman Bisnis:
 
-Hasil evaluasi model menggunakan Mean Squared Error (MSE) menunjukkan bahwa model dapat menjawab pernyataan masalah yang diajukan di awal. Tujuan penelitian ini telah tercapai, karena model Random Forest, yang menunjukkan performa terbaik, memberikan akurasi prediksi yang memadai untuk harga penutupan Bitcoin. Informasi ini sangat berharga bagi investor yang ingin memprediksi pergerakan harga Bitcoin di masa depan.
+Hasil evaluasi model menggunakan Root Mean Squared Error (RMSE) menunjukkan bahwa model dapat menjawab pernyataan masalah yang diajukan di awal. Tujuan penelitian ini telah tercapai, karena LSTM, yang menunjukkan performa terbaik, memberikan akurasi prediksi yang memadai untuk harga penutupan Bitcoin. Informasi ini sangat berharga bagi investor yang ingin memprediksi pergerakan harga Bitcoin di masa depan.
 
 ## Kesimpulan
 
