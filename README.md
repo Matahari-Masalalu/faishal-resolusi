@@ -36,12 +36,31 @@ Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Da
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
 
 ## Data Preparation
+
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
-Data Cleaning: Pada tahap ini, dilakukan pengecekan terhadap data yang tidak valid seperti nilai 0 pada kolom Open, High, Low, Close, dan Volume. Dataset juga dicek untuk keberadaan data duplikat dan nilai yang hilang (NaN).
+- Data Cleaning: Pada tahap ini, dilakukan pengecekan terhadap data yang tidak valid seperti nilai 0 pada kolom Open, High, Low, Close, dan Volume. Dataset juga dicek untuk keberadaan data duplikat dan nilai yang hilang (NaN).
 
-Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+- Data Transformation: Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
 
-Data Scaling: Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler untuk menormalkan nilai fitur dan meningkatkan performa model.
+- Data Scaling: Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan StandardScaler untuk menormalkan nilai fitur dan meningkatkan performa model.
 
 Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
+
+## Modeling
+
+Pada proyek ini, tiga algoritma machine learning digunakan untuk memprediksi harga penutupan Bitcoin (BTC), yaitu:
+
+- K-Nearest Neighbors (KNN): Model KNN bekerja dengan mencari k data terdekat dari data yang ingin diprediksi. Prediksi kemudian didasarkan pada rata-rata dari k data terdekat tersebut. Model ini mudah dipahami dan diterapkan, tetapi dapat menjadi tidak efisien untuk dataset yang besar.
+
+- Random Forest: Model Random Forest merupakan ensemble learning yang terdiri dari banyak pohon keputusan. Setiap pohon dilatih dengan subset data dan variabel acak. Prediksi akhir dilakukan dengan menggabungkan prediksi dari setiap pohon. Model ini memiliki akurasi yang tinggi dan mampu menangani data yang kompleks, tetapi membutuhkan waktu yang lebih lama untuk dilatih.
+
+- AdaBoost (Adaptive Boosting): Model AdaBoost merupakan algoritma boosting yang menggabungkan banyak model yang lemah untuk membentuk model yang kuat. Model yang lemah diberi bobot lebih tinggi jika prediksinya benar. Model ini memiliki akurasi yang tinggi dan mampu menangani data yang kompleks, tetapi dapat mengalami overfitting jika tidak diatur dengan baik.
+
+Pada proses pelatihan model, parameter yang digunakan adalah sebagai berikut:
+
+- KNN: n_neighbors=10. Parameter ini menentukan jumlah tetangga terdekat yang digunakan untuk memprediksi nilai target.
+
+- Random Forest: n_estimators=50, max_depth=16, random_state=55, n_jobs=-1. Parameter n_estimators menentukan jumlah pohon dalam Random Forest, max_depth menentukan kedalaman maksimal pohon, random_state digunakan untuk inisialisasi random number generator, dan n_jobs menentukan jumlah core CPU yang digunakan untuk pelatihan.
+
+- AdaBoost: learning_rate=0.05, random_state=55. Parameter learning_rate menentukan besarnya pengaruh setiap model yang lemah pada model akhir, dan random_state digunakan untuk inisialisasi random number generator.
