@@ -35,6 +35,10 @@ Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Da
 
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
 
+## Data visualization
+
+![Cuplikan layar 2024-10-20 161127](https://github.com/user-attachments/assets/28cce4a0-8db3-43df-8b5f-8ce8b65c0fce)
+
 ## Data Preparation
 
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
