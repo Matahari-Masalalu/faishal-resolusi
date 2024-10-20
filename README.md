@@ -24,6 +24,9 @@ Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik den
 
 Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle atau Google Drive. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023.
 
+sumber/referensi : https://www.kaggle.com/datasets/gallo33henrique/bitcoin-btc-usd-stock-dataset
+sumber/referensi : https://www.kaggle.com/code/njugushedit/btc-usd-market-analysis
+
 - Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
 - Date: Tanggal data yang direkam (dalam format YYYY-MM-DD).
 - Open: Harga pembukaan Bitcoin pada hari tersebut.
