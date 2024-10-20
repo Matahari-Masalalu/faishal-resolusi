@@ -105,3 +105,7 @@ Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujia
 Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
 
 Secara keseluruhan, model Random Forest memiliki performa yang paling baik berdasarkan metrik MSE. Hal ini karena model Random Forest mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model KNN dan Boosting.
+
+## Kesimpulan
+
+Di buku catatan ini, kami menjelajahi kumpulan data saham Bitcoin (BTC-USD), memvisualisasikan tren utama, dan membuat model prediktif untuk memperkirakan harga penutupan Bitcoin. Model Random Forest memberikan akurasi prediksi yang wajar, namun selalu ada ruang untuk perbaikan. Analisis di masa depan dapat mengeksplorasi model yang lebih canggih atau menggabungkan sumber data tambahan untuk meningkatkan akurasi prediksi. Jika menurut Anda buku catatan ini berwawasan luas, suara positif akan sangat dihargai.
