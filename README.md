@@ -22,23 +22,17 @@ Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meni
 Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik dengan mengekstrak informasi tahun, bulan, hari, dan hari dalam seminggu.
 
 ## Data Understanding
+
 Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle atau Google Drive. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023.
 
-Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
-
-Date: Tanggal data yang direkam (dalam format YYYY-MM-DD).
-
-Open: Harga pembukaan Bitcoin pada hari tersebut.
-
-High: Harga tertinggi Bitcoin pada hari tersebut.
-
-Low: Harga terendah Bitcoin pada hari tersebut.
-
-Close: Harga penutupan Bitcoin pada hari tersebut.
-
-Adj Close: Harga penutupan yang disesuaikan untuk peristiwa seperti dividen atau pemisahan saham.
-
-Volume: Volume perdagangan Bitcoin pada hari tersebut.
+- Variabel-variabel pada Bitcoin dataset adalah sebagai berikut:
+- Date: Tanggal data yang direkam (dalam format YYYY-MM-DD).
+- Open: Harga pembukaan Bitcoin pada hari tersebut.
+- High: Harga tertinggi Bitcoin pada hari tersebut.
+- Low: Harga terendah Bitcoin pada hari tersebut.
+- Close: Harga penutupan Bitcoin pada hari tersebut.
+- Adj Close: Harga penutupan yang disesuaikan untuk peristiwa seperti dividen atau pemisahan saham.
+- Volume: Volume perdagangan Bitcoin pada hari tersebut.
 
 Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren harga Bitcoin, seperti pola harian, bulanan, atau tahunan, serta analisis hubungan antar variabel seperti harga dan volume perdagangan.
 
