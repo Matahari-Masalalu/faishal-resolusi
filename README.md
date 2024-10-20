@@ -24,8 +24,6 @@ Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik den
 
 sumber/referensi : https://www.kaggle.com/datasets/gallo33henrique/bitcoin-btc-usd-stock-dataset
 
-sumber/referensi : https://www.kaggle.com/code/njugushedit/btc-usd-market-analysis
-
 Dataset yang digunakan pada proyek ini adalah dataset Bitcoin (BTC-USD) Stock Data yang diunduh dari Kaggle. Dataset ini berisi informasi historis tentang harga Bitcoin dari tahun 2014 hingga 2023. Dataset ini memiliki 2836 baris dan 7 kolom, tidak ada nilai missing value dan data duplikat pada semua kolom atau baris, tetapi pada kolom volume masih terdapat outliner yang dituntukan pada gambar dibawah ini.
 
 ![image](https://github.com/user-attachments/assets/2f31a20d-b31f-4d80-83b4-9e0fdce20103)
