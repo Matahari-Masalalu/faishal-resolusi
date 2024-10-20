@@ -39,6 +39,29 @@ Dataset ini dapat divisualisasikan untuk mendapatkan wawasan awal tentang tren h
 
 ![Cuplikan layar 2024-10-20 161127](https://github.com/user-attachments/assets/28cce4a0-8db3-43df-8b5f-8ce8b65c0fce)
 
+## Exploratory Data Analysis
+
+Total Volume Trader by Year
+
+![Cuplikan layar 2024-10-20 161335](https://github.com/user-attachments/assets/3a115df8-8f77-4c58-964c-9c860e53c5e1)
+
+Total Volume Trader by Month for Each Year
+
+![Cuplikan layar 2024-10-20 161422](https://github.com/user-attachments/assets/454289a1-df2b-48e5-b9cb-e9a98aaa76ed)
+
+High and Low Value Over time
+
+![Cuplikan layar 2024-10-20 161701](https://github.com/user-attachments/assets/d7b7567c-b536-4a4f-8cae-107e9ff0f6d8)
+
+High and Low Value for 2023
+
+![Cuplikan layar 2024-10-20 161608](https://github.com/user-attachments/assets/0179068c-ceee-4743-a1dd-70ac9c614b16)
+
+High and Low Value for October 2023
+
+![Cuplikan layar 2024-10-20 161640](https://github.com/user-attachments/assets/10219937-c3dd-43be-8fce-bb5ee0b62740)
+
+
 ## Data Preparation
 
 Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
