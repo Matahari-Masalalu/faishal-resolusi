@@ -96,7 +96,6 @@ Model	Train MSE	Test MSE
 - KNN	164.1	205.2
 - Random Forest	17.6	182.2
 - Boosting	28.3	184.1
-- 
 Berdasarkan hasil MSE, dapat disimpulkan bahwa:
 
 Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
