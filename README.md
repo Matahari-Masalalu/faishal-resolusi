@@ -64,3 +64,43 @@ Pada proses pelatihan model, parameter yang digunakan adalah sebagai berikut:
 - Random Forest: n_estimators=50, max_depth=16, random_state=55, n_jobs=-1. Parameter n_estimators menentukan jumlah pohon dalam Random Forest, max_depth menentukan kedalaman maksimal pohon, random_state digunakan untuk inisialisasi random number generator, dan n_jobs menentukan jumlah core CPU yang digunakan untuk pelatihan.
 
 - AdaBoost: learning_rate=0.05, random_state=55. Parameter learning_rate menentukan besarnya pengaruh setiap model yang lemah pada model akhir, dan random_state digunakan untuk inisialisasi random number generator.
+
+## Evaluation
+
+Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah Mean Squared Error (MSE). MSE merupakan metrik yang umum digunakan untuk mengevaluasi model regresi.
+
+Penjelassan mengenai metrik yang digunakan:
+
+MSE menghitung rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
+
+![Cuplikan layar 2024-10-20 155611](https://github.com/user-attachments/assets/636a0d1b-a371-45f1-af31-b05a962d3e74)
+
+Dimana:
+
+N = jumlah dataset
+
+yi = nilai sebenarnya
+
+y_pred = nilai prediksi
+
+MSE memberikan ukuran kesalahan prediksi model. Nilai MSE yang rendah menandakan bahwa model memiliki kesalahan prediksi yang kecil dan performa yang baik. Sebaliknya, nilai MSE yang tinggi menandakan bahwa model memiliki kesalahan prediksi yang besar dan performa yang buruk.
+
+Hasil proyek berdasarkan metrik MSE:
+
+Berikut adalah hasil MSE dari ketiga model yang telah dilatih:
+
+![Cuplikan layar 2024-10-20 155841](https://github.com/user-attachments/assets/2882be6b-3c61-4136-9818-468fec90f31a)
+
+Model	Train MSE	Test MSE
+KNN	164.1	205.2
+Random Forest	17.6	182.2
+Boosting	28.3	184.1
+Berdasarkan hasil MSE, dapat disimpulkan bahwa:
+
+Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+
+Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujian, dengan nilai MSE yang relatif rendah pada data pengujian.
+
+Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+
+Secara keseluruhan, model Random Forest memiliki performa yang paling baik berdasarkan metrik MSE. Hal ini karena model Random Forest mampu menangkap pola yang kompleks dalam data dan menghasilkan prediksi yang lebih akurat dibandingkan dengan model KNN dan Boosting.
