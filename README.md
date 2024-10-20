@@ -15,7 +15,6 @@ Proyek ini bertujuan untuk membangun model machine learning untuk memprediksi ha
 ### Goals
 - Jawaban pernyataan masalah 1: Membangun model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi, diukur dengan metrik Mean Squared Error (MSE).
 - Jawaban pernyataan masalah 2: Mengoptimalkan performa model machine learning dengan teknik data preparation dan hyperparameter tuning sehingga nilai MSE pada data testing lebih kecil.
-- 
 ### Solution Statement
 Penggunaan Multiple Algoritma Machine Learning: Proyek ini akan menggunakan tiga algoritma machine learning, yaitu K-Nearest Neighbors (KNN), Random Forest, dan Boosting (AdaBoost). Ketiga algoritma ini dipilih karena kemampuannya yang berbeda dalam menangani data dengan karakteristik yang kompleks, sehingga diharapkan dapat memberikan hasil yang optimal.
 Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meningkatkan kualitas data dan performa model, seperti:
