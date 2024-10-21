@@ -113,8 +113,6 @@ karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolo
 
 Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
 
-
-
 ### Data Splitting  
 Set pelatihan (train_set) diambil dari data Bitcoin hingga tahun 2020, dengan hanya kolom harga penutupan (Close) yang digunakan. Kode:
 python
@@ -125,9 +123,12 @@ Set pengujian (test_set) diambil dari data Bitcoin mulai tahun 2021, juga hanya 
 Karena LSTM menyimpan status memori jangka panjang, kita membuat struktur data dengan 60 langkah waktu (time steps) dan 1 keluaran (output). Untuk setiap elemen dalam set pelatihan, kita menggunakan 60 elemen sebelumnya. Kode untuk membuat struktur data ini adalah sebagai berikut:
 
 ### Data Standarization  
-Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan MinMaxScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
+Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan MinMaxScaler, MinMaxScaler mengubah rentang fitur menjadi antara 0 dan 1, yang membantu model dalam proses pembelajaran dengan mengurangi skala variabel yang berbeda untuk menormalkan nilai fitur dan meningkatkan performa model.
 
-Tahapan data preparation ini penting untuk memastikan kualitas data dan meningkatkan akurasi model machine learning.
+### Reshaping Shape x_train
+Setelah menyiapkan struktur data dengan 60 langkah waktu, kita perlu membentuk ulang x_train agar sesuai dengan input yang diharapkan oleh model LSTM.
+
+Di sini, x_train diubah menjadi tiga dimensi dengan bentuk (jumlah sampel, jumlah langkah waktu, jumlah fitur). Ini penting karena LSTM membutuhkan input dalam format tiga dimensi
 
 ## Modeling
 
