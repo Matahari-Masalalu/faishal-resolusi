@@ -128,7 +128,21 @@ Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low,
 ### Reshaping Shape x_train
 Setelah menyiapkan struktur data dengan 60 langkah waktu, kita perlu membentuk ulang x_train agar sesuai dengan input yang diharapkan oleh model LSTM.
 
-Di sini, x_train diubah menjadi tiga dimensi dengan bentuk (jumlah sampel, jumlah langkah waktu, jumlah fitur). Ini penting karena LSTM membutuhkan input dalam format tiga dimensi
+Di sini, x_train diubah menjadi tiga dimensi dengan bentuk (jumlah sampel, jumlah langkah waktu, jumlah fitur). Ini penting karena LSTM membutuhkan input dalam format tiga dimensi.
+
+### Preparing the Test Set
+Untuk mempersiapkan set pengujian, kita perlu melakukan beberapa langkah agar set pengujian memiliki struktur yang sama dengan set pelatihan.
+
+#### 1. Menggabungkan Data:
+Kita menggabungkan data Bitcoin hingga tahun 2020 dan mulai tahun 2021 ke dalam satu dataframe untuk memudahkan proses pemrosesan.
+
+#### 2. Membuat Input untuk Set Pengujian
+Kita membuat input untuk set pengujian dengan mengambil 60 nilai sebelumnya dari data atribut 'Close' yang telah digabungkan.
+
+Kemudian, kita reshape input menjadi bentuk yang sesuai untuk proses normalisasi.
+
+#### 3. Normalisasi Input
+Kita melakukan normalisasi pada input menggunakan MinMaxScaler yang telah digunakan sebelumnya untuk set pelatihan.
 
 ## Modeling
 
