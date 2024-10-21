@@ -152,28 +152,27 @@ Model LSTM adalah model jaringan saraf rekursi yang digunakan untuk memprediksi 
 
 Parameter yang digunakan dalam Model LSTM adalah sebagai berikut:
 
-- units: Jumlah unit dalam setiap lapisan LSTM.
-- return_sequences: Menentukan apakah setiap lapisan LSTM menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir.
-- input_shape: Bentuk input data.
-- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting.
-- optimizer: Algoritma optimisasi yang digunakan untuk melatih model.
-- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model.
-- epochs: Jumlah iterasi pelatihan.
-- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan.
-
+- units: Jumlah unit dalam setiap lapisan LSTM. Pada model ini, nilai units yang digunakan adalah 50. Nilai ini dipilih karena jumlah unit yang cukup besar dapat membantu model untuk mempelajari pola yang kompleks dalam data.
+- return_sequences: Menentukan apakah setiap lapisan LSTM menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir. Pada model ini, nilai return_sequences yang digunakan adalah True untuk lapisan pertama, kedua, dan ketiga, dan False untuk lapisan keempat. Hal ini dilakukan karena kita ingin model untuk menghasilkan output untuk setiap langkah waktu pada lapisan awal, dan kemudian menghasilkan output hanya untuk langkah waktu terakhir pada lapisan akhir.
+input_shape: Bentuk input data. Pada model ini, nilai input_shape yang digunakan adalah (x_train.shape[1], 1), yang berarti bahwa input data memiliki bentuk (jumlah langkah waktu, 1).
+- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting. Pada model ini, nilai dropout yang digunakan adalah 0.2, yang berarti bahwa 20% neuron diabaikan selama pelatihan.
+- optimizer: Algoritma optimisasi yang digunakan untuk melatih model. Pada model ini, nilai optimizer yang digunakan adalah 'rmsprop', yang merupakan algoritma optimisasi yang populer untuk jaringan saraf.
+- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model. Pada model ini, nilai loss yang digunakan adalah 'mean_squared_error', yang merupakan fungsi loss yang umum digunakan untuk regresi.
+- epochs: Jumlah iterasi pelatihan. Pada model ini, nilai epochs yang digunakan adalah 50, yang berarti bahwa model dilatih selama 50 iterasi.
+- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan. Pada model ini, nilai batch_size yang digunakan adalah 32, yang berarti bahwa 32 sampel digunakan dalam setiap iterasi pelatihan.
 
 Model GRU adalah model jaringan saraf rekursi yang mirip dengan Model LSTM, tetapi memiliki struktur yang lebih sederhana. Model GRU memiliki dua gerbang, yaitu gerbang pembaruan dan gerbang penataan, yang mengontrol aliran informasi dalam model.
 
 Parameter yang digunakan dalam Model GRU adalah sebagai berikut:
 
-- units: Jumlah unit dalam setiap lapisan GRU.
-- return_sequences: Menentukan apakah setiap lapisan GRU menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir.
-- input_shape: Bentuk input data.
-- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting.
-- optimizer: Algoritma optimisasi yang digunakan untuk melatih model.
-- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model.
-- epochs: Jumlah iterasi pelatihan.
-- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan.
+- units: Jumlah unit dalam setiap lapisan GRU. Pada model ini, nilai units yang digunakan adalah 50, sama seperti pada Model LSTM.
+- return_sequences: Menentukan apakah setiap lapisan GRU menghasilkan output untuk setiap langkah waktu atau hanya menghasilkan output untuk langkah waktu terakhir. Pada model ini, nilai return_sequences yang digunakan adalah True untuk lapisan pertama, kedua, dan ketiga, dan False untuk lapisan keempat, sama seperti pada Model LSTM.
+- input_shape: Bentuk input data. Pada model ini, nilai input_shape yang digunakan adalah (x_train.shape[1], 1), sama seperti pada Model LSTM.
+- dropout: Persentase neuron yang diabaikan selama pelatihan untuk mencegah overfitting. Pada model ini, nilai dropout yang digunakan adalah 0.2, sama seperti pada Model LSTM.
+- optimizer: Algoritma optimisasi yang digunakan untuk melatih model. Pada model ini, nilai optimizer yang digunakan adalah SGD dengan learning rate 0.01, decay 1e-7, momentum 0.9, dan nesterov False.
+- loss: Fungsi loss yang digunakan untuk menghitung kesalahan model. Pada model ini, nilai loss yang digunakan adalah 'mean_squared_error', yang merupakan fungsi loss yang umum digunakan untuk regresi.
+- epochs: Jumlah iterasi pelatihan. Pada model ini, nilai epochs yang digunakan adalah 50, yang berarti bahwa model dilatih selama 50 iterasi.
+- batch_size: Jumlah sampel yang digunakan dalam setiap iterasi pelatihan. Pada model ini, nilai batch_size yang digunakan adalah 150, yang berarti bahwa 150 sampel digunakan dalam setiap iterasi pelatihan.
 
 ## Evaluation
 
@@ -222,5 +221,10 @@ Secara keseluruhan, model LSTM memiliki performa yang paling baik berdasarkan me
 Hasil evaluasi model menggunakan Root Mean Squared Error (RMSE) menunjukkan bahwa model dapat menjawab pernyataan masalah yang diajukan di awal. Tujuan penelitian ini telah tercapai, karena LSTM, yang menunjukkan performa terbaik, memberikan akurasi prediksi yang memadai untuk harga penutupan Bitcoin. Informasi ini sangat berharga bagi investor yang ingin memprediksi pergerakan harga Bitcoin di masa depan.
 
 ## Kesimpulan
+Di buku catatan ini, kami menjelajahi kumpulan data saham Bitcoin (BTC-USD), memvisualisasikan tren utama, dan membuat model prediktif untuk memperkirakan harga penutupan Bitcoin. Model LSTM dan GRU telah diterapkan, dengan LSTM menunjukkan performa terbaik berdasarkan metrik RMSE.
 
-Di buku catatan ini, kami menjelajahi kumpulan data saham Bitcoin (BTC-USD), memvisualisasikan tren utama, dan membuat model prediktif untuk memperkirakan harga penutupan Bitcoin. Model Random Forest memberikan akurasi prediksi yang wajar, namun selalu ada ruang untuk perbaikan. Analisis di masa depan dapat mengeksplorasi model yang lebih canggih atau menggabungkan sumber data tambahan untuk meningkatkan akurasi prediksi. Jika menurut Anda buku catatan ini berwawasan luas, suara positif akan sangat dihargai.
+- Model LSTM: Menunjukkan akurasi prediksi yang tinggi dan mampu menangani pola temporal yang rumit.
+
+- Model GRU: Meskipun performanya sedikit lebih rendah dibandingkan LSTM, model ini masih memberikan hasil yang baik dalam memprediksi harga Bitcoin.
+
+Selalu ada ruang untuk perbaikan, dan analisis di masa depan dapat mengeksplorasi model yang lebih canggih atau menggabungkan sumber data tambahan untuk meningkatkan akurasi prediksi. Jika menurut Anda buku catatan ini berwawasan luas, suara positif akan sangat dihargai.
