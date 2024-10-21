@@ -12,11 +12,11 @@ Proyek ini bertujuan untuk membangun model machine learning yang dapat mempredik
 - Pernyataan Masalah : Bagaimana merancang model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi?
 
 ### Goals
-- Jawaban pernyataan masalah : Membangun model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi, diukur dengan metrik Mean Squared Error (MSE).
+- Jawaban pernyataan masalah : Membangun model machine learning yang dapat memprediksi harga penutupan (Close) Bitcoin dengan akurasi yang tinggi, diukur dengan metrik Root Mean Squared Error (rMSE).
 ### Solution Statement
-- Penggunaan Multiple Algoritma Machine Learning: Proyek ini akan menggunakan tiga algoritma machine learning, yaitu K-Nearest Neighbors (KNN), Random Forest, dan Boosting (AdaBoost). Ketiga algoritma ini dipilih karena kemampuannya yang berbeda dalam menangani data dengan karakteristik yang kompleks, sehingga diharapkan dapat memberikan hasil yang optimal.
+- Penggunaan Multiple Algoritma Machine Learning: Karakteristik Data: Algoritma LSTM dan GRU dipilih karena kemampuannya dalam menangani data sekuensial yang kompleks, seperti deret waktu, teks, atau data lain yang memiliki struktur temporal. Kedua algoritma ini diharapkan dapat memberikan hasil yang optimal dalam pengolahan data dengan ketergantungan jangka panjang.
 - Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meningkatkan kualitas data dan performa model, seperti:
-Encoding Fitur Kategori: Mengubah kolom tanggal (Date) menjadi fitur numerik dengan mengekstrak informasi tahun, bulan, hari, dan hari dalam seminggu.
+Normalisasi Data Menggunakan MinMaxScaler untuk menskalakan data dalam rentang (0, 1). Ini membantu dalam mempercepat konvergensi model machine learning dan meningkatkan akurasi.
 
 ## Data Understanding
 
@@ -113,11 +113,16 @@ karena pada penjelasan data understanding sebelumnya terdapat outliner pada kolo
 
 Interquartile range (IQR) adalah rentang data antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Kuartil adalah tiga nilai yang membagi distribusi data menjadi empat bagian sama besar. Q1 adalah nilai yang memisahkan 25% data terendah dari 75% data lainnya, Q2 (yang juga merupakan median) memisahkan 50% data terendah dari 50% data lainnya, dan Q3 memisahkan 75% data terendah dari 25% data lainnya. Dengan kata lain, IQR adalah rentang tengah 50% data.
 
-### Data Transformation 
-Kolom Date diubah menjadi format datetime untuk analisis waktu dan dipecah menjadi kolom Year, Month, Day, dan DayOfWeek untuk mendapatkan fitur-fitur waktu yang dapat digunakan dalam model machine learning.
+
 
 ### Data Splitting  
-Data dibagi menjadi set pelatihan dan set pengujian menggunakan train_test_split dari sklearn.model_selection, Fitur Close dihapus dari dataset untuk digunakan sebagai target, dan dataset dibagi dengan proporsi 80% untuk pelatihan dan 20% untuk pengujian.
+Set pelatihan (train_set) diambil dari data Bitcoin hingga tahun 2020, dengan hanya kolom harga penutupan (Close) yang digunakan. Kode:
+python
+
+Set pengujian (test_set) diambil dari data Bitcoin mulai tahun 2021, juga hanya menggunakan kolom harga penutupan.
+
+### Creating Data Structures
+Karena LSTM menyimpan status memori jangka panjang, kita membuat struktur data dengan 60 langkah waktu (time steps) dan 1 keluaran (output). Untuk setiap elemen dalam set pelatihan, kita menggunakan 60 elemen sebelumnya. Kode untuk membuat struktur data ini adalah sebagai berikut:
 
 ### Data Standarization  
 Fitur numerik yang akan digunakan untuk pelatihan model seperti Open, High, Low, Adj Close, dan Volume diskalakan menggunakan MinMaxScaler dan membulatkan semua nilai statistik deskriptif ke 4 angka di belakang koma untuk menormalkan nilai fitur dan meningkatkan performa model.
@@ -157,11 +162,11 @@ Parameter yang digunakan dalam Model GRU adalah sebagai berikut:
 
 ## Evaluation
 
-Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah Mean Squared Error (MSE). MSE merupakan metrik yang umum digunakan untuk mengevaluasi model regresi.
+Pada proyek ini, metrik yang digunakan untuk mengevaluasi performa model adalah Mean Squared Error (rMSE). MSE merupakan metrik yang umum digunakan untuk mengevaluasi model regresi.
 
 Penjelassan mengenai metrik yang digunakan:
 
-RMSE menghitung akar rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
+rMSE menghitung akar rata-rata kuadrat dari perbedaan antara nilai sebenarnya dan nilai prediksi. Rumus MSE adalah sebagai berikut:
 
 ![rmse-1](https://github.com/user-attachments/assets/196f7b57-446f-41ff-800a-6fd204729256)
 
@@ -179,15 +184,13 @@ Hasil proyek berdasarkan metrik MSE: Berikut adalah hasil MSE dari ketiga model 
 
 ![Cuplikan layar 2024-10-20 231344](https://github.com/user-attachments/assets/221ce827-812d-4c20-af26-b08095dbeade)
 
-Grafik menunjukkan skor MSE untuk berbagai model time series. Model dengan skor RMSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor MSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
+Grafik menunjukkan skor rMSE untuk berbagai model time series. Model dengan skor RMSE tertinggi adalah model yang paling tidak akurat, sedangkan model dengan skor rMSE terendah adalah model yang paling akurat. Berdasarkan grafik, model "linear" adalah yang paling akurat, sedangkan model "polynomial" adalah yang paling tidak akurat.
 
 Berdasarkan hasil rMSE, dapat disimpulkan bahwa:
 
-- Model KNN memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+- Model LSTM memiliki nilai rMSE yang relatif rendah, menunjukkan bahwa model ini memiliki performa yang baik dalam memprediksi harga Bitcoin.
 
-- Model Random Forest memiliki performa yang baik pada data pelatihan dan pengujian, dengan nilai MSE yang relatif rendah pada data pengujian.
-
-- Model Boosting memiliki performa yang baik pada data pelatihan, namun performanya menurun pada data pengujian.
+- Model GRU memiliki nilai rMSE yang sedikit lebih tinggi dibandingkan dengan model LSTM, menunjukkan bahwa model ini memiliki performa yang baik namun tidak sebaik model LSTM.
 
 ### Prediksi harga bitcoin menggunakan model LSTM
 
