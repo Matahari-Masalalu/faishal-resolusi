@@ -63,9 +63,9 @@ Sistem rekomendasi dievaluasi berdasarkan akurasi dan relevansi rekomendasi yang
 ### Evaluasi Untuk Collaborative Filtering dengan melihat Tetangga Terdekat
 ![Cuplikan layar 2024-11-09 014726](https://github.com/user-attachments/assets/9d1982e9-55ff-49d2-9a4f-85fee5622e39)
 ### Rekomendasi Berdasarkan Item (Item-Based Collaborative Filtering)
-![Cuplikan layar 2024-11-09 014827](https://github.com/user-attachments/assets/b8b218d1-b4f9-47d5-a390-16ae935f4768)
-### Rekomendasi Berdasarkan Item (User-Based Collaborative Filtering)
 ![Cuplikan layar 2024-11-09 014753](https://github.com/user-attachments/assets/fc739f5d-2b55-486a-a5a7-269fbe1974a3)
+### Rekomendasi Berdasarkan Item (User-Based Collaborative Filtering)
+![Cuplikan layar 2024-11-09 014827](https://github.com/user-attachments/assets/b8b218d1-b4f9-47d5-a390-16ae935f4768)
 
 ## Dampak Model terhadap Pemahaman Bisnis:
 
