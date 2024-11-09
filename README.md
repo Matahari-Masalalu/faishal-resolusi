@@ -47,15 +47,15 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
 - Genre Film yang Paling Umum: Mengidentifikasi genre film yang paling banyak ditonton.
 ![Cuplikan layar 2024-11-09 101428](https://github.com/user-attachments/assets/994903d6-ab6f-4487-a447-cbbc48b33330)
+Genre film yang paling umum adalah Drama dan Comedy, yang menunjukkan preferensi pengguna terhadap film-film tersebut.
+
 - Tag yang Sering Digunakan: Menganalisis tag yang sering digunakan oleh pengguna.
 ![Cuplikan layar 2024-11-09 101547](https://github.com/user-attachments/assets/b97c394c-ab9f-4f0c-a148-d375b9175f4b)
+Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disukai pengguna dalam film.
+
 - Menganalisis tag yang sering digunakan oleh pengguna.
 ![Cuplikan layar 2024-11-09 101631](https://github.com/user-attachments/assets/9ea03ecd-0b18-42fd-b0d2-156f71610390)
-
-#### Insight dari EDA
-- Genre film yang paling umum adalah Drama dan Comedy, yang menunjukkan preferensi pengguna terhadap film-film tersebut.
-- Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disukai pengguna dalam film.
-- Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
+Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
 
 ## Data Preparation
 - Menghapus Nilai Null: menghapus baris dengan nilai null dari dataset untuk memastikan hanya data lengkap yang digunakan dalam analisis. Baris tanpa tag dalam dataset tags dihapus, sedangkan baris tanpa rating dalam dataset ratings juga dihilangkan. Langkah ini menjamin relevansi dan kualitas data yang digunakan.
