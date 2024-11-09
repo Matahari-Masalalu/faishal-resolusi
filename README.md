@@ -129,6 +129,7 @@ Di mana:
 
 ### Hasil Evaluasi Menggunakan MAE
 ![Cuplikan layar 2024-11-10 004501](https://github.com/user-attachments/assets/ff6c499e-905c-4767-81b6-e11ace953638)
+
 Secara keseluruhan, MAE sebesar 0.20173630200422316 menunjukkan bahwa model rekomendasi film Anda dapat memberikan prediksi rating yang cukup akurat, dan pengguna kemungkinan besar akan merasa puas dengan rekomendasi yang diberikan berdasarkan model tersebut. Namun, selalu penting untuk membandingkan MAE ini dengan nilai MAE dari model lain atau baseline untuk menilai seberapa baik model Anda dibandingkan dengan alternatif yang ada.
 
 ## Dampak Model terhadap Pemahaman Bisnis:
