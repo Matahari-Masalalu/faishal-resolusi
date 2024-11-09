@@ -19,13 +19,23 @@ Proyek ini bertujuan untuk membangun sistem rekomendasi film menggunakan teknik 
 
 ## Data Understanding
 
+### Sumber Data
 sumber/referensi :  https://www.kaggle.com/datasets/kanametov/movies-recomendation-system
 
+### Jumlah Data
 Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
-- movies.csv: Berisi informasi tentang film, seperti judul, tahun rilis, dan genre.
-- links.csv: Berisi informasi tentang link film, kemungkinan ke platform IMDb.
-- tags.csv: Berisi tag atau label yang diberikan oleh pengguna untuk film tertentu.
-- ratings.csv: Berisi data rating yang diberikan oleh pengguna untuk film.
+- movies.csv: 34,208 baris dan 3 kolom (movieId, title, genres).
+- links.csv: 34,208 baris dan 2 kolom (movieId, imdbId).
+- tags.csv: 34,208 baris dan 4 kolom (userId, movieId, tag, timestamp).
+- ratings.csv: 4,144,672 baris dan 4 kolom (userId, movieId, rating, timestamp).
+
+### Kondisi Data
+- Missing Values: Setelah dilakukan analisis ada nilai yang hilang(null) pada dataset tags, links, dan rating.
+- Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
+
+### Data Cleaning
+#### Menghilangkan Nilai Null
+Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. Berikut adalah langkah-langkah yang diambil:
 
 ## Exploratory Data Analysis
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
