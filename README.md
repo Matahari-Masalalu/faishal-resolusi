@@ -128,7 +128,9 @@ Mean Absolute Error (MAE) adalah salah satu metode evaluasi yang umum digunakan 
 Definisi MAE
 MAE dihitung sebagai rata-rata dari selisih absolut antara nilai yang diprediksi (prediksi rating) dan nilai yang sebenarnya (rating aktual). Rumus untuk menghitung MAE adalah sebagai berikut:
 
-![images](https://github.com/user-attachments/assets/ee92ab2e-5e78-40df-a1b8-0a739ddc4837)
+
+![Cuplikan layar 2024-11-10 013916](https://github.com/user-attachments/assets/a3c76aef-f44d-4028-a051-c1bb32948fe2)
+
 
 Di mana:
 
