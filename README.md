@@ -96,17 +96,17 @@ Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity me
 
 ### Hasil Prediksi
 
-- Rekomendasi Pada Content Based Filtering
+#### Rekomendasi Pada Content Based Filtering
   
-[Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
+![Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
 
-- Rekomendasi Pada Item Based Filtering
+#### Rekomendasi Pada Item Based Filtering
 
-[Cuplikan layar 2024-11-10 002544](https://github.com/user-attachments/assets/b75d7a2e-d2a5-4ac4-8f2c-132ededb8983)
+![Cuplikan layar 2024-11-10 002544](https://github.com/user-attachments/assets/b75d7a2e-d2a5-4ac4-8f2c-132ededb8983)
 
-- Rekomendasi Pasa User Based Filtering
+#### Rekomendasi Pasa User Based Filtering
 
-[Cuplikan layar 2024-11-10 004327](https://github.com/user-attachments/assets/fcc1693e-1a16-44cd-9d99-d6d19ce04e15)
+![Cuplikan layar 2024-11-10 004327](https://github.com/user-attachments/assets/fcc1693e-1a16-44cd-9d99-d6d19ce04e15)
 
 
 
