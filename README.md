@@ -61,15 +61,23 @@ Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disuk
 Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
 
 ## Data Preparation
+### 1. Data PreparationContent-Based Filtering:
 - Menghapus Nilai Null: menghapus baris dengan nilai null dari dataset untuk memastikan hanya data lengkap yang digunakan dalam analisis. Baris tanpa tag dalam dataset tags dihapus, sedangkan baris tanpa rating dalam dataset ratings juga dihilangkan. Langkah ini menjamin relevansi dan kualitas data yang digunakan.
+- Penggabungan Dataset: Menggabungkan dataset ratings.csv dan tags.csv berdasarkan movieId.
+- Penghapusan Kolom : Menghapus kolom timestamp dan userId pada data yang telah digabungkan sebelumnya.
+- Mengelompokkan Tag untuk Setiap Film: Mengelompokkan tag untuk setiap film berdasarkan movieId, title, dan genres. Ini menyusun tag menjadi list untuk setiap film, sehingga kita dapat melihat semua tag yang terkait dengan film tersebut.
+- Menghapus Karakter Khusus: Pada langkah ini, kita akan menggunakan fungsi remove_special_characters untuk menghapus karakter khusus dari kolom tag dan genres. Ini membantu memastikan bahwa data yang kita gunakan tidak mengandung karakter yang tidak diinginkan yang dapat mempengaruhi analisis atau pemodelan.
+- Menambahkan Spasi Antar Genre: Dalam beberapa dataset, genre mungkin ditulis tanpa spasi antar kata (misalnya, "ActionAdventure"). Untuk meningkatkan keterbacaan dan konsistensi, kita menambahkan spasi antar genre. Kita menggunakan regex untuk menambahkan spasi sebelum huruf kapital yang tidak berada di awal string.
+- ** Membuat kolom description_words yang berisi semua 'tag' dan 'genre' untuk setiap film, yang akan digunakan dalam proses modeling.
+- TF-IDF Vectorization: Menggunakan TfidfVectorizer untuk mengubah kolom description_words menjadi representasi numerik. Parameter lowercase=True digunakan untuk mengubah semua teks menjadi huruf kecil.
+- Ekstraksi Fitur: Menggabungkan informasi dari file tags.csv dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
+### 2. Collaborative Filtering:
 - Penggabungan Dataset: Menggabungkan dataset ratings.csv dan movies.csv berdasarkan movieId.
 - Pembuatan Pivot Table: Membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film.
 - Mengisi Nilai yang Hilang: Mengisi nilai yang hilang (NaN) dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tertentu.
-- Ekstraksi Fitur: Menggabungkan informasi dari file tags.csv dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
-- ** Membuat kolom description_words yang berisi semua 'tag' dan 'genre' untuk setiap film, yang akan digunakan dalam proses modeling.
-- TF-IDF Vectorization: Menggunakan TfidfVectorizer untuk mengubah kolom description_words menjadi representasi numerik. Parameter lowercase=True digunakan untuk mengubah semua teks menjadi huruf kecil.
 - Transposisi Matriks: Untuk keperluan analisis lebih lanjut, matriks transposisi dibuat sehingga baris mewakili pengguna dan kolom mewakili film. Ini mempermudah saat melakukan rekomendasi berbasis pengguna.
 - Membagi Data: Data dibagi menjadi data pelatihan (training) dan data pengujian (test) menggunakan train_test_split. Ini bertujuan untuk melatih model pada satu bagian data dan mengujinya pada bagian lain untuk mengevaluasi performa model.
+- Ekstraksi Fitur Menggunakan Matriks Sparse: Untuk efisiensi memori dan kecepatan komputasi, matriks sparse digunakan. Matriks sparse menyimpan hanya nilai-nilai yang tidak nol, yang sangat berguna dalam konteks sistem rekomendasi di mana sebagian besar pengguna tidak memberikan rating untuk sebagian besar film.
 
 ## Modeling
 ### 1. Content-Based Filtering:
