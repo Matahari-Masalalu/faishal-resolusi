@@ -106,14 +106,6 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
 ![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
 
-## Content-Based Filtering
-
-### Data Preparation
-#### Ekstraksi Fitur
-- Data dari file tags.csv digabungkan dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Setelah itu, kita melakukan pembersihan data, termasuk menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
-- Kolom description_words dibuat dengan menggabungkan genre dan tag untuk setiap film, yang akan digunakan dalam proses modeling.
--  Menggunakan TF-IDF Vectorizer untuk mengubah deskripsi film menjadi representasi numerik. Ini memungkinkan kita untuk menghitung kesamaan antar film berdasarkan deskripsi mereka.
-
 ### Modeling
 
 - Pada pendekatan Content-Based Filtering, saya menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
