@@ -33,23 +33,44 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - Missing Values: Setelah dilakukan analisis ada nilai yang hilang(null) pada dataset tags, links, dan rating.
 - Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
 
-### Data Cleaning
-#### Menghilangkan Nilai Null
-Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. Berikut adalah langkah-langkah yang diambil:
-
 ## Exploratory Data Analysis
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
-- Memeriksa distribusi rating film.
-- Melihat genre film yang paling umum.
+- Genre Film yang Paling Umum: Mengidentifikasi genre film yang paling banyak ditonton.
+![Cuplikan layar 2024-11-09 101428](https://github.com/user-attachments/assets/994903d6-ab6f-4487-a447-cbbc48b33330)
+- Tag yang Sering Digunakan: Menganalisis tag yang sering digunakan oleh pengguna.
+![Cuplikan layar 2024-11-09 101547](https://github.com/user-attachments/assets/b97c394c-ab9f-4f0c-a148-d375b9175f4b)
 - Menganalisis tag yang sering digunakan oleh pengguna.
+![Cuplikan layar 2024-11-09 101631](https://github.com/user-attachments/assets/9ea03ecd-0b18-42fd-b0d2-156f71610390)
+
+### Insight dari EDA
+- Genre film yang paling umum adalah Drama dan Comedy, yang menunjukkan preferensi pengguna terhadap film-film tersebut.
+- Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disukai pengguna dalam film.
+- Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
+
+### Data Cleaning
+#### Menghilangkan Nilai Null
+Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. 
+#### Hasil
+![Cuplikan layar 2024-11-09 101112](https://github.com/user-attachments/assets/8b3e9be7-512c-4c5c-af5a-2483620eaf1b)
+
 
 ## Content-Based Filtering
 
 ### Data Preparation
-Data dari file tags.csv digabungkan dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Setelah itu, kita melakukan pembersihan data, termasuk menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
+#### Ekstraksi Fitur
+- Data dari file tags.csv digabungkan dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Setelah itu, kita melakukan pembersihan data, termasuk menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
+- Kolom description_words dibuat dengan menggabungkan genre dan tag untuk setiap film, yang akan digunakan dalam proses modeling.
+-  Menggunakan TF-IDF Vectorizer untuk mengubah deskripsi film menjadi representasi numerik. Ini memungkinkan kita untuk menghitung kesamaan antar film berdasarkan deskripsi mereka.
 
 ### Modeling
-Modeling dilakukan dengan menggunakan TF-IDF Vectorizer untuk mengubah deskripsi film menjadi representasi numerik. Kemudian, cosine similarity digunakan untuk menghitung kesamaan antar film. Fungsi rekomendasi dibuat untuk memberikan rekomendasi berdasarkan film yang telah ditonton pengguna.
+
+- Pada pendekatan Content-Based Filtering, kami menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus:
+![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
+#### di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
+
+- Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Fungsi ini akan mengambil judul film sebagai input dan mengembalikan daftar film yang mirip.
+
+
 
 ## Item-Based Collaborative Filtering
 
