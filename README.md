@@ -43,14 +43,6 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - Missing Values: Setelah dilakukan analisis ada nilai yang hilang(null) pada dataset tags, links, dan rating.
 - Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
 
-### Data Cleaning
-Setelah mengidentifikasi adanya nilai null dalam dataset, langkah pertama yang kami ambil adalah melakukan pembersihan data sebagai berikut:
-
-- Identifikasi Missing Values: Melalui analisis, kami menemukan kolom yang memiliki nilai null. Ini termasuk kolom tags dan rating, yang merupakan aset penting dalam proses rekomendasi.
-
-- Menghapus Nilai Null: Dalam kasus ini, kami memilih untuk menghapus baris dengan nilai null dari dataset. Hal ini dilakukan untuk memastikan bahwa hanya data yang lengkap dan relevan yang digunakan dalam analisis dan model. Tepatnya, dalam dataset tags, kami menghapus baris yang tidak memiliki tag yang terkait dengan film. Sedangkan dari dataset rating, baris yang tidak memiliki rating sama sekali dihapus.
-- Hasil Pembersihan: Setelah proses pembersihan, kami memperoleh dataset yang lebih bersih dan siap untuk digunakan dalam analisis lebih lanjut dan pengembangan model rekomendasi. Kami memastikan bahwa kolom-kolom kunci memiliki nilai yang valid, sehingga meningkatkan keakuratan model rekomendasi.
-
 ### Exploratory Data Analysis
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
 - Genre Film yang Paling Umum: Mengidentifikasi genre film yang paling banyak ditonton.
@@ -66,6 +58,7 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 - Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
 
 ## Data Preparation
+- Menghapus Nilai Null: menghapus baris dengan nilai null dari dataset untuk memastikan hanya data lengkap yang digunakan dalam analisis. Baris tanpa tag dalam dataset tags dihapus, sedangkan baris tanpa rating dalam dataset ratings juga dihilangkan. Langkah ini menjamin relevansi dan kualitas data yang digunakan.
 - Penggabungan Dataset: Menggabungkan dataset ratings.csv dan movies.csv berdasarkan movieId.
 - Pembuatan Pivot Table: Membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film.
 - Mengisi Nilai yang Hilang: Mengisi nilai yang hilang (NaN) dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tertentu.
@@ -108,19 +101,14 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
 ![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
 
-### Modeling
-
-- Pada pendekatan Content-Based Filtering, saya menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
-![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
-
-- Kemudian Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Fungsi ini akan mengambil judul film sebagai input dan mengembalikan daftar film yang mirip.
-
 #### Hasil
 - Rekomendasi Pada Content Based Filtering
-- 
+![Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
 - Rekomendasi Pada Item Based Filtering
-- 
+![Cuplikan layar 2024-11-10 002544](https://github.com/user-attachments/assets/b75d7a2e-d2a5-4ac4-8f2c-132ededb8983)
 - Rekomendasi Pasa User Based Filtering
+![Cuplikan layar 2024-11-10 004327](https://github.com/user-attachments/assets/fcc1693e-1a16-44cd-9d99-d6d19ce04e15)
+
 
 ## Evaluation
 Evaluasi Model Rekomendasi Menggunakan Mean Absolute Error (MAE)
@@ -135,6 +123,10 @@ Di mana:
 ( n ) = jumlah total prediksi (data pengujian).
 ( yi ) = rating aktual dari item (film) yang ditonton oleh pengguna (data tes).
 ( ŷ ) = rating yang diprediksi oleh model.
+
+### Hasil Evaluasi Menggunakan MAE
+![Cuplikan layar 2024-11-10 004501](https://github.com/user-attachments/assets/ff6c499e-905c-4767-81b6-e11ace953638)
+Secara keseluruhan, MAE sebesar 0.20173630200422316 menunjukkan bahwa model rekomendasi film Anda dapat memberikan prediksi rating yang cukup akurat, dan pengguna kemungkinan besar akan merasa puas dengan rekomendasi yang diberikan berdasarkan model tersebut. Namun, selalu penting untuk membandingkan MAE ini dengan nilai MAE dari model lain atau baseline untuk menilai seberapa baik model Anda dibandingkan dengan alternatif yang ada.
 
 ## Dampak Model terhadap Pemahaman Bisnis:
 
