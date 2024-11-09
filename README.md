@@ -80,20 +80,25 @@ Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas
 - Ekstraksi Fitur Menggunakan Matriks Sparse: Untuk efisiensi memori dan kecepatan komputasi, matriks sparse digunakan. Matriks sparse menyimpan hanya nilai-nilai yang tidak nol, yang sangat berguna dalam konteks sistem rekomendasi di mana sebagian besar pengguna tidak memberikan rating untuk sebagian besar film.
 
 ## Modeling
+Pada proyek ini, dua pendekatan digunakan untuk memberikan rekomendasi film, yaitu Content-Based Filtering dan Collaborative Filtering. Kedua pendekatan ini memanfaatkan teknik machine learning untuk menganalisis data dan menghasilkan rekomendasi yang relevan bagi pengguna.
 ### 1. Content-Based Filtering:
-- TF-IDF Vectorization: Menggunakan TF-IDF Vectorizer untuk mengubah deskripsi film menjadi representasi numerik. Ini memungkinkan kita untuk menghitung kesamaan antar film berdasarkan deskripsi mereka.
-- Cosine Similarity: Menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film.
-- Fungsi Rekomendasi: Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna.
+Content-Based Filtering adalah pendekatan dalam sistem rekomendasi yang berfokus pada analisis konten dari item (dalam hal ini, film) untuk memberikan rekomendasi kepada pengguna. Pendekatan ini menggunakan informasi yang tersedia tentang item, seperti deskripsi, genre, dan tag, untuk menentukan kesamaan antara item yang berbeda. Dengan demikian, rekomendasi yang dihasilkan akan relevan dengan preferensi pengguna yang telah ditentukan oleh film yang mereka tonton sebelumnya.
+
+1. Cosine Similarity: Langkah pertama dalam Content-Based Filtering adalah menghitung cosine similarity untuk menemukan kesamaan antar film. Cosine similarity mengukur sudut antara dua vektor dalam ruang multidimensi, yang dalam konteks ini adalah representasi numerik dari film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Dengan menghitung cosine similarity, kita dapat menentukan seberapa mirip dua film berdasarkan konten yang mereka miliki. Nilai cosine similarity berkisar antara 0 (tidak ada kesamaan) hingga 1 (kesamaan sempurna), sehingga memungkinkan kita untuk mengidentifikasi film-film yang memiliki deskripsi atau genre yang serupa.
+   
+2. Fungsi Rekomendasi: Setelah menghitung cosine similarity, langkah berikutnya adalah membuat fungsi get_recommendation. Fungsi ini akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Dengan menggunakan hasil cosine similarity, fungsi ini dapat mencari film yang paling mirip dengan film yang dipilih oleh pengguna. Sebagai contoh, jika pengguna telah menonton dan menyukai film tertentu, fungsi ini akan mengembalikan daftar film lain yang memiliki kesamaan konten, sehingga meningkatkan kemungkinan bahwa pengguna akan menikmati film-film tersebut.
   
 ### 2. Collaborative Filtering:
-Collaborative Filtering: Menggunakan model Nearest Neighbors untuk menemukan film yang mirip berdasarkan rating pengguna. Rekomendasi ditampilkan dengan memvisualisasikan jarak antar film yang direkomendasikan.
+Collaborative Filtering adalah pendekatan dalam sistem rekomendasi yang memanfaatkan data interaksi pengguna untuk menemukan film yang mirip berdasarkan rating yang diberikan oleh pengguna. Pendekatan ini berfokus pada pola perilaku pengguna dan mengidentifikasi film yang mungkin disukai pengguna berdasarkan preferensi pengguna lain yang memiliki kesamaan.
 
-1. Menghitung Similarity Antara Item: Dalam pendekatan ini, kita menghitung kesamaan antara film berdasarkan rating yang diberikan oleh pengguna. Metrik yang umum digunakan adalah cosine similarity atau Pearson correlation, mirip dengan pendekatan pengguna. Pada kasus ini saya menggunakan Cosine Similarity.
+1. Dalam pendekatan Collaborative Filtering, langkah pertama adalah menghitung kesamaan antara film berdasarkan rating yang diberikan oleh pengguna. Metrik yang umum digunakan untuk mengukur kesamaan ini adalah cosine similarity atau Pearson correlation. Pada kasus ini, saya menggunakan cosine similarity untuk mengukur seberapa mirip rating yang diberikan oleh pengguna terhadap film-film yang berbeda. Dengan menghitung kesamaan ini, kita dapat menentukan hubungan antara film berdasarkan preferensi pengguna, yang kemudian akan digunakan untuk memberikan rekomendasi.
 
-2. Mencari Item Mirip: Setelah menghitung kesamaan antara film, model akan mencari film lain yang memiliki rating serupa. Film-film ini disebut sebagai "tetangga terdekat" untuk film tertentu.
+2. Mencari Item Mirip: Setelah menghitung kesamaan antara film, langkah selanjutnya adalah mencari film lain yang memiliki rating serupa. Film-film ini disebut sebagai "tetangga terdekat" untuk film tertentu. Proses ini melibatkan pengidentifikasian film yang memiliki kesamaan rating dengan film yang sedang dianalisis, sehingga memungkinkan sistem untuk merekomendasikan film yang mungkin disukai pengguna berdasarkan film yang telah mereka tonton dan beri rating sebelumnya.
 
-3. Rekomendasi Film: Rekomendasi diberikan berdasarkan film yang mirip dengan film yang telah ditonton oleh pengguna. Jika pengguna telah menonton dan menyukai film tertentu, maka film-film yang mirip akan direkomendasikan.
-#### Parameter:
+3. Rekomendasi diberikan berdasarkan film yang mirip dengan film yang telah ditonton oleh pengguna. Jika pengguna telah menonton dan menyukai film tertentu, maka film-film yang mirip akan direkomendasikan. Fungsi ini akan mengembalikan daftar film yang dapat direkomendasikan kepada pengguna berdasarkan kesamaan rating yang telah dihitung sebelumnya.
+
+
+Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai berikut::
 - n_neighbors=5: Menentukan jumlah tetangga terdekat (film) yang akan dicari.
 - metric='cosine': Menggunakan cosine similarity sebagai metode pengukuran kesamaan.
 - algorithm='brute': Menentukan algoritma brute-force untuk menemukan tetangga terdekat, cocok untuk dataset kecil atau sedang.
