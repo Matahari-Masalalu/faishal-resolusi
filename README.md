@@ -102,10 +102,7 @@ Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai ber
 - n_neighbors=5: Menentukan jumlah tetangga terdekat (film) yang akan dicari.
 - metric='cosine': Menggunakan cosine similarity sebagai metode pengukuran kesamaan.
 - algorithm='brute': Menentukan algoritma brute-force untuk menemukan tetangga terdekat, cocok untuk dataset kecil atau sedang.
-
-Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
-![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
-
+  
 
 ### Hasil Prediksi
 
@@ -142,6 +139,8 @@ Di mana:
 ( ŷ ) = rating yang diprediksi oleh model.
 
 ### Hasil Evaluasi Menggunakan MAE
+
+
 ![Cuplikan layar 2024-11-10 004501](https://github.com/user-attachments/assets/ff6c499e-905c-4767-81b6-e11ace953638)
 
 Secara keseluruhan, MAE sebesar 0.20173630200422316 menunjukkan bahwa model rekomendasi film Anda dapat memberikan prediksi rating yang cukup akurat, dan pengguna kemungkinan besar akan merasa puas dengan rekomendasi yang diberikan berdasarkan model tersebut. Namun, selalu penting untuk membandingkan MAE ini dengan nilai MAE dari model lain atau baseline untuk menilai seberapa baik model Anda dibandingkan dengan alternatif yang ada.
