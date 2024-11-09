@@ -33,6 +33,12 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - Missing Values: Setelah dilakukan analisis ada nilai yang hilang(null) pada dataset tags, links, dan rating.
 - Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
 
+### Data Cleaning
+#### Menghilangkan Nilai Null
+Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. 
+#### Hasil
+![Cuplikan layar 2024-11-09 101112](https://github.com/user-attachments/assets/8b3e9be7-512c-4c5c-af5a-2483620eaf1b)
+
 ## Exploratory Data Analysis
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
 - Genre Film yang Paling Umum: Mengidentifikasi genre film yang paling banyak ditonton.
@@ -46,13 +52,6 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 - Genre film yang paling umum adalah Drama dan Comedy, yang menunjukkan preferensi pengguna terhadap film-film tersebut.
 - Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disukai pengguna dalam film.
 - Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
-
-### Data Cleaning
-#### Menghilangkan Nilai Null
-Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. 
-#### Hasil
-![Cuplikan layar 2024-11-09 101112](https://github.com/user-attachments/assets/8b3e9be7-512c-4c5c-af5a-2483620eaf1b)
-
 
 ## Content-Based Filtering
 
