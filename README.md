@@ -64,18 +64,23 @@ Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertam
 
 ### Modeling
 
-- Pada pendekatan Content-Based Filtering, kami menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus:
+- Pada pendekatan Content-Based Filtering, saya menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
 ![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
-#### di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
 
-- Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Fungsi ini akan mengambil judul film sebagai input dan mengembalikan daftar film yang mirip.
-
-
+- Kemudian Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Fungsi ini akan mengambil judul film sebagai input dan mengembalikan daftar film yang mirip.
 
 ## Item-Based Collaborative Filtering
 
 ### Data Preparation
-Dataset digabungkan antara ratings.csv dan movies.csv untuk mendapatkan informasi rating lengkap. Setelah itu, pivot table dibuat untuk mendapatkan matriks film versus pengguna.
+#### 1. Penggabungan Dataset
+- Dataset ratings.csv berisi informasi tentang rating yang diberikan oleh pengguna untuk film tertentu, sedangkan movies.csv berisi informasi tentang film itu sendiri, seperti judul dan genre.
+- Untuk analisis yang lebih komprehensif, kedua dataset ini perlu digabungkan berdasarkan kolom movieId, yang merupakan kunci yang menghubungkan kedua dataset.
+
+#### 2. Membuat Pivot Table
+- Pivot table dibuat untuk menyusun data dalam format yang lebih mudah dianalisis. Dalam hal ini, kita ingin membuat matriks di mana barisnya adalah pengguna dan kolomnya adalah film, dengan nilai yang menunjukkan rating yang diberikan oleh pengguna untuk film tersebut.
+
+#### Mengisi Nilai yang Hilang atau nan
+- Dalam pivot table, tidak semua pengguna akan memberikan rating untuk semua film. Oleh karena itu, nilai yang hilang (NaN) akan dihasilkan. Untuk analisis lebih lanjut, kita perlu mengisi nilai-nilai ini, biasanya dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tersebut.
 
 ### Modeling
 Model Nearest Neighbors digunakan untuk menemukan film yang mirip berdasarkan rating pengguna. Rekomendasi ditampilkan dengan memvisualisasikan jarak antar film yang direkomendasikan.
@@ -89,8 +94,7 @@ Matriks rating pengguna ditransposisi untuk memudahkan analisis berdasarkan peng
 Model Nearest Neighbors digunakan kembali untuk menemukan pengguna lain yang memiliki perilaku rating serupa. Rekomendasi film diberikan berdasarkan film yang telah ditonton oleh pengguna yang mirip.
 
 ## Evaluation
-Sistem rekomendasi dievaluasi berdasarkan akurasi dan relevansi rekomendasi yang diberikan. Metrik evaluasi dapat mencakup precision, recall, dan user satisfaction.
-
+Sistem rekomendasi dievaluasi berdasarkan akurasi dan relevansi rekomendasi yang diberikan.
 ### Evaluasi Untuk Collaborative Filtering dengan melihat Tetangga Terdekat
 ![Cuplikan layar 2024-11-09 014726](https://github.com/user-attachments/assets/9d1982e9-55ff-49d2-9a4f-85fee5622e39)
 ### Rekomendasi Berdasarkan Item (Item-Based Collaborative Filtering)
