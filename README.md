@@ -118,10 +118,13 @@ Mean Absolute Error (MAE) adalah salah satu metode evaluasi yang umum digunakan 
 Definisi MAE
 MAE dihitung sebagai rata-rata dari selisih absolut antara nilai yang diprediksi (prediksi rating) dan nilai yang sebenarnya (rating aktual). Rumus untuk menghitung MAE adalah sebagai berikut:
 ![images](https://github.com/user-attachments/assets/ee92ab2e-5e78-40df-a1b8-0a739ddc4837)
+
 Di mana:
 
 ( n ) = jumlah total prediksi (data pengujian).
+
 ( yi ) = rating aktual dari item (film) yang ditonton oleh pengguna (data tes).
+
 ( ŷ ) = rating yang diprediksi oleh model.
 
 ### Hasil Evaluasi Menggunakan MAE
@@ -142,4 +145,7 @@ Secara keseluruhan, model rekomendasi ini tidak hanya memberikan nilai tambah ba
 Proyek ini berhasil membangun sistem rekomendasi film menggunakan teknik Content-Based Filtering dan Collaborative Filtering. Hasil evaluasi menunjukkan bahwa sistem dapat memberikan rekomendasi yang relevan dan membantu pengguna dalam menemukan film yang sesuai dengan preferensi mereka.
 
 ## Referensi
-
+1. Dicoding. Diakses pada 10 November 2024 dari https://www.dicoding.com/academies/319-machine-learning-terapan
+2. Rodrigo de Menezes Gomes - Kaggle. Diakses pada 10 November 2024 dari https://www.kaggle.com/datasets/kanametov/movies-recomendation-system
+3. Rodrigo de Menezes Gomes - Kaggle. Diakses pada 10 November 2024 dari https://www.kaggle.com/code/rodmnzs/movies-recommendation-system
+4. Google Colab. Diakses pada 10 November 2024 https://g.co/kgs/tPKUQUM
