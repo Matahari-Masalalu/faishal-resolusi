@@ -57,6 +57,7 @@ Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disuk
 
 - Menganalisis tag yang sering digunakan oleh pengguna.
 ![Cuplikan layar 2024-11-09 101631](https://github.com/user-attachments/assets/9ea03ecd-0b18-42fd-b0d2-156f71610390)
+
 Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
 
 ## Data Preparation
