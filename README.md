@@ -101,7 +101,9 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity mengukur seberapa mirip dua vektor dalam ruang multidimensi, dan dihitung menggunakan rumus: di mana (A) dan (B) adalah vektor dari dua film yang dibandingkan.
 ![cosine-similarity](https://github.com/user-attachments/assets/f80c0851-a4a3-4dda-b7fb-121a45e3b980)
 
-#### Hasil
+
+### Hasil Prediksi
+
 - Rekomendasi Pada Content Based Filtering
 ![Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
 - Rekomendasi Pada Item Based Filtering
