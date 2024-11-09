@@ -70,7 +70,6 @@ Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas
 - Menambahkan Spasi Antar Genre: Dalam beberapa dataset, genre mungkin ditulis tanpa spasi antar kata (misalnya, "ActionAdventure"). Untuk meningkatkan keterbacaan dan konsistensi, kita menambahkan spasi antar genre. Kita menggunakan regex untuk menambahkan spasi sebelum huruf kapital yang tidak berada di awal string.
 - ** Membuat kolom description_words yang berisi semua 'tag' dan 'genre' untuk setiap film, yang akan digunakan dalam proses modeling.
 - TF-IDF Vectorization: Menggunakan TfidfVectorizer untuk mengubah kolom description_words menjadi representasi numerik. Parameter lowercase=True digunakan untuk mengubah semua teks menjadi huruf kecil.
-- Ekstraksi Fitur: Menggabungkan informasi dari file tags.csv dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
 ### 2. Data Preparation Pada Collaborative Filtering:
 - Penggabungan Dataset: Menggabungkan dataset ratings.csv dan movies.csv berdasarkan movieId.
 - Pembuatan Pivot Table: Membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film.
