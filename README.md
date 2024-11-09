@@ -29,6 +29,16 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - tags.csv: 34,208 baris dan 4 kolom (userId, movieId, tag, timestamp).
 - ratings.csv: 4,144,672 baris dan 4 kolom (userId, movieId, rating, timestamp).
 
+### Penjelasan Fitur Dataset
+- movieId: ID unik untuk setiap film.
+- title: Judul film
+- genres: Genre film, yang dapat terdiri dari beberapa genre yang dipisahkan oleh tanda '|'.
+- imdbId: ID film di IMDb untuk referensi lebih lanjut.
+- userId: ID unik untuk setiap pengguna yang memberikan rating.
+- tag: Tag atau label yang diberikan oleh pengguna untuk film tertentu.
+- rating: Rating yang diberikan oleh pengguna untuk film, biasanya dari 1 hingga 5.
+- timestamp: Waktu ketika rating atau tag diberikan.
+
 ### Kondisi Data
 - Missing Values: Setelah dilakukan analisis ada nilai yang hilang(null) pada dataset tags, links, dan rating.
 - Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
@@ -39,7 +49,7 @@ Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertam
 #### Hasil
 ![Cuplikan layar 2024-11-09 101112](https://github.com/user-attachments/assets/8b3e9be7-512c-4c5c-af5a-2483620eaf1b)
 
-## Exploratory Data Analysis
+### Exploratory Data Analysis
 Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal mengenai dataset. Beberapa analisis yang dilakukan meliputi:
 - Genre Film yang Paling Umum: Mengidentifikasi genre film yang paling banyak ditonton.
 ![Cuplikan layar 2024-11-09 101428](https://github.com/user-attachments/assets/994903d6-ab6f-4487-a447-cbbc48b33330)
@@ -48,10 +58,33 @@ Pada tahap ini, kita melakukan eksplorasi data untuk mendapatkan wawasan awal me
 - Menganalisis tag yang sering digunakan oleh pengguna.
 ![Cuplikan layar 2024-11-09 101631](https://github.com/user-attachments/assets/9ea03ecd-0b18-42fd-b0d2-156f71610390)
 
-### Insight dari EDA
+#### Insight dari EDA
 - Genre film yang paling umum adalah Drama dan Comedy, yang menunjukkan preferensi pengguna terhadap film-film tersebut.
 - Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disukai pengguna dalam film.
 - Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
+
+## Data Preparation
+- Penggabungan Dataset: Menggabungkan dataset ratings.csv dan movies.csv berdasarkan movieId.
+- Pembuatan Pivot Table: Membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film.
+- Mengisi Nilai yang Hilang: Mengisi nilai yang hilang (NaN) dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tertentu.
+- Ekstraksi Fitur: Menggabungkan informasi dari file tags.csv dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
+- ** Membuat kolom description_words yang berisi semua 'tag' dan 'genre' untuk setiap film, yang akan digunakan dalam proses modeling.
+
+## Modeling
+### 1. Content-Based Filtering:
+
+- TF-IDF Vectorization: Menggunakan TF-IDF Vectorizer untuk mengubah deskripsi film menjadi representasi numerik. Ini memungkinkan kita untuk menghitung kesamaan antar film berdasarkan deskripsi mereka.
+- Cosine Similarity: Menghitung cosine similarity untuk menemukan kesamaan antar film berdasarkan fitur yang diekstrak dari genre atau deskripsi film.
+- Fungsi Rekomendasi: Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna.
+- 
+### 2. Collaborative Filtering:
+- Item-Based Collaborative Filtering: Menggunakan model Nearest Neighbors untuk menemukan film yang mirip berdasarkan rating pengguna. Rekomendasi ditampilkan dengan memvisualisasikan jarak antar film yang direkomendasikan.
+1. Menghitung Similarity Antara Item: Dalam pendekatan ini, kita menghitung kesamaan antara film berdasarkan rating yang diberikan oleh pengguna. Metrik yang umum digunakan adalah cosine similarity atau Pearson correlation, mirip dengan pendekatan pengguna. Pada kasus ini saya menggunakan Cosine Similarity.
+
+2. Mencari Item Mirip: Setelah menghitung kesamaan antara film, model akan mencari film lain yang memiliki rating serupa. Film-film ini disebut sebagai "tetangga terdekat" untuk film tertentu.
+
+3. Rekomendasi Film: Rekomendasi diberikan berdasarkan film yang mirip dengan film yang telah ditonton oleh pengguna. Jika pengguna telah menonton dan menyukai film tertentu, maka film-film yang mirip akan direkomendasikan.
+- User -Based Collaborative Filtering: Menggunakan model Nearest Neighbors untuk menemukan pengguna lain yang memiliki perilaku rating serupa. Rekomendasi film diberikan berdasarkan film yang telah ditonton oleh pengguna yang mirip.
 
 ## Content-Based Filtering
 
