@@ -61,7 +61,7 @@ Tag yang sering digunakan memberikan wawasan tentang tema atau elemen yang disuk
 Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas 3, menunjukkan kepuasan pengguna yang relatif tinggi.
 
 ## Data Preparation
-### 1. Data PreparationContent-Based Filtering:
+### 1. Data Preparation Pada Content-Based Filtering:
 - Menghapus Nilai Null: menghapus baris dengan nilai null dari dataset untuk memastikan hanya data lengkap yang digunakan dalam analisis. Baris tanpa tag dalam dataset tags dihapus, sedangkan baris tanpa rating dalam dataset ratings juga dihilangkan. Langkah ini menjamin relevansi dan kualitas data yang digunakan.
 - Penggabungan Dataset: Menggabungkan dataset ratings.csv dan tags.csv berdasarkan movieId.
 - Penghapusan Kolom : Menghapus kolom timestamp dan userId pada data yang telah digabungkan sebelumnya.
@@ -71,7 +71,7 @@ Dari distribusi rating, terlihat bahwa mayoritas film mendapatkan rating di atas
 - ** Membuat kolom description_words yang berisi semua 'tag' dan 'genre' untuk setiap film, yang akan digunakan dalam proses modeling.
 - TF-IDF Vectorization: Menggunakan TfidfVectorizer untuk mengubah kolom description_words menjadi representasi numerik. Parameter lowercase=True digunakan untuk mengubah semua teks menjadi huruf kecil.
 - Ekstraksi Fitur: Menggabungkan informasi dari file tags.csv dengan movies.csv untuk membuat dataset yang berisi informasi lengkap tentang film. Menghapus karakter khusus dan menggabungkan genre dan tag menjadi satu kolom deskripsi.
-### 2. Collaborative Filtering:
+### 2. Data Preparation Pada Collaborative Filtering:
 - Penggabungan Dataset: Menggabungkan dataset ratings.csv dan movies.csv berdasarkan movieId.
 - Pembuatan Pivot Table: Membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film.
 - Mengisi Nilai yang Hilang: Mengisi nilai yang hilang (NaN) dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tertentu.
