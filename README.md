@@ -44,9 +44,14 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - Duplikat: Setelah dilakukan analisis tidak ditemukan duplikat dalam tiap-tiap dataset.
 
 ### Data Cleaning
-#### Menghilangkan Nilai Null
-Setelah mengidentifikasi bahwa terdapat nilai null dalam dataset, langkah pertama yang kami ambil adalah menghapus nilai-nilai tersebut. 
-#### Hasil
+Setelah mengidentifikasi adanya nilai null dalam dataset, langkah pertama yang kami ambil adalah melakukan pembersihan data sebagai berikut:
+
+- Identifikasi Missing Values: Melalui analisis, kami menemukan kolom yang memiliki nilai null. Ini termasuk kolom tags dan rating, yang merupakan aset penting dalam proses rekomendasi.
+
+- Menghapus Nilai Null: Dalam kasus ini, kami memilih untuk menghapus baris dengan nilai null dari dataset. Hal ini dilakukan untuk memastikan bahwa hanya data yang lengkap dan relevan yang digunakan dalam analisis dan model. 
+
+Tepatnya, dalam dataset tags, kami menghapus baris yang tidak memiliki tag yang terkait dengan film. Sedangkan dari dataset rating, baris yang tidak memiliki rating sama sekali dihapus.
+- Hasil Pembersihan: Setelah proses pembersihan, kami memperoleh dataset yang lebih bersih dan siap untuk digunakan dalam analisis lebih lanjut dan pengembangan model rekomendasi. Kami memastikan bahwa kolom-kolom kunci memiliki nilai yang valid, sehingga meningkatkan keakuratan model rekomendasi.
 ![Cuplikan layar 2024-11-09 101112](https://github.com/user-attachments/assets/8b3e9be7-512c-4c5c-af5a-2483620eaf1b)
 
 ### Exploratory Data Analysis
