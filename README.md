@@ -121,61 +121,26 @@ Saya menggunakan Cosine pada kedua pendekatan model diatas. Cosine similarity me
 
 - Kemudian Membuat fungsi get_recommendation yang akan memberikan rekomendasi film berdasarkan film yang telah ditonton oleh pengguna. Fungsi ini akan mengambil judul film sebagai input dan mengembalikan daftar film yang mirip.
 
-## Item-Based Collaborative Filtering
-
-### Data Preparation
-#### 1. Penggabungan Dataset
-- Dataset ratings.csv berisi informasi tentang rating yang diberikan oleh pengguna untuk film tertentu, sedangkan movies.csv berisi informasi tentang film itu sendiri, seperti judul dan genre.
-- Untuk analisis yang lebih komprehensif, kedua dataset ini perlu digabungkan berdasarkan kolom movieId, yang merupakan kunci yang menghubungkan kedua dataset.
-
-#### 2. Membuat Pivot Table
-- Pivot table dibuat untuk menyusun data dalam format yang lebih mudah dianalisis. Dalam hal ini, kita ingin membuat matriks di mana barisnya adalah pengguna dan kolomnya adalah film, dengan nilai yang menunjukkan rating yang diberikan oleh pengguna untuk film tersebut.
-
-#### 3. Mengisi Nilai yang Hilang atau nan
-- Dalam pivot table, tidak semua pengguna akan memberikan rating untuk semua film. Oleh karena itu, nilai yang hilang (NaN) akan dihasilkan. Untuk analisis lebih lanjut, kita perlu mengisi nilai-nilai ini, biasanya dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tersebut.
-
-### Modeling
-Model Nearest Neighbors digunakan untuk menemukan film yang mirip berdasarkan rating pengguna. Rekomendasi ditampilkan dengan memvisualisasikan jarak antar film yang direkomendasikan.
-
-#### Cara Kerja Model (Nearest Neighbors) pada Item-Based Collaborative Filtering
-
-1. Menghitung Similarity Antara Item: Dalam pendekatan ini, kita menghitung kesamaan antara film berdasarkan rating yang diberikan oleh pengguna. Metrik yang umum digunakan adalah cosine similarity atau Pearson correlation, mirip dengan pendekatan pengguna. Pada kasus ini saya menggunakan Cosine Similarity.
-
-2. Mencari Item Mirip: Setelah menghitung kesamaan antara film, model akan mencari film lain yang memiliki rating serupa. Film-film ini disebut sebagai "tetangga terdekat" untuk film tertentu.
-
-3. Rekomendasi Film: Rekomendasi diberikan berdasarkan film yang mirip dengan film yang telah ditonton oleh pengguna. Jika pengguna telah menonton dan menyukai film tertentu, maka film-film yang mirip akan direkomendasikan.
-
-## User-Based Collaborative Filtering
-
-### Data Preparation
-data yang digunakan adalah data yang sama pada tahap data preparation di Item-Based Collaborative sehingga kita tidak perlu membuat ulang data dan menggabungkannya
-#### 1. Membuat Pivot Table
-- Kita akan membuat pivot table yang menunjukkan rating yang diberikan oleh pengguna untuk setiap film. Dalam hal ini, baris akan mewakili pengguna dan kolom akan mewakili film. Nilai dalam tabel adalah rating yang diberikan oleh pengguna.
-
-#### 2. Transposisi Matriks:
-- Setelah membuat pivot table, kita akan mentransposisi matriks tersebut sehingga baris mewakili film dan kolom mewakili pengguna. Ini akan memudahkan analisis ketika kita ingin mencari film yang mirip berdasarkan rating pengguna.
-
-#### 3. Mengisi Nilai yang Hilang:
-- Setelah transposisi, kita juga perlu mengisi nilai yang hilang (NaN) dengan 0, yang menunjukkan bahwa pengguna tersebut tidak memberikan rating untuk film tertentu.
-
-### Modeling
-Model Nearest Neighbors digunakan kembali untuk menemukan pengguna lain yang memiliki perilaku rating serupa. Rekomendasi film diberikan berdasarkan film yang telah ditonton oleh pengguna yang mirip.
-
-#### Cara Kerja Model (Nearest Neighbors)
-1. Menghitung Similarity: Model Nearest Neighbors menghitung kesamaan antara pengguna berdasarkan rating yang mereka berikan. Kesamaan ini biasanya diukur menggunakan metrik seperti cosine similarity atau Pearson correlation. Dalam konteks ini, kita menggunakan cosine similarity.
-
-2. Mencari Tetangga Terdekat: Setelah menghitung kesamaan antara pengguna, model akan mencari pengguna lain yang memiliki perilaku rating serupa. Pengguna-pengguna ini disebut sebagai "tetangga terdekat".
-
-3. Rekomendasi Film: Rekomendasi film diberikan berdasarkan film yang telah ditonton dan dinilai oleh pengguna yang mirip. Film yang mendapat rating tinggi dari tetangga terdekat akan direkomendasikan kepada pengguna yang sedang mencari rekomendasi.
+#### Hasil
+- Rekomendasi Pada Content Based Filtering
+- 
+- Rekomendasi Pada Item Based Filtering
+- 
+- Rekomendasi Pasa User Based Filtering
 
 ## Evaluation
-Sistem rekomendasi dievaluasi berdasarkan akurasi dan relevansi rekomendasi yang diberikan.
-### Evaluasi Untuk Collaborative Filtering dengan melihat Tetangga Terdekat
-![Cuplikan layar 2024-11-09 014726](https://github.com/user-attachments/assets/9d1982e9-55ff-49d2-9a4f-85fee5622e39)
-### Rekomendasi Berdasarkan Item (Item-Based Collaborative Filtering)
-![Cuplikan layar 2024-11-09 014753](https://github.com/user-attachments/assets/fc739f5d-2b55-486a-a5a7-269fbe1974a3)
-### Rekomendasi Berdasarkan Item (User-Based Collaborative Filtering)
-![Cuplikan layar 2024-11-09 014827](https://github.com/user-attachments/assets/b8b218d1-b4f9-47d5-a390-16ae935f4768)
+Evaluasi Model Rekomendasi Menggunakan Mean Absolute Error (MAE)
+
+Mean Absolute Error (MAE) adalah salah satu metode evaluasi yang umum digunakan dalam sistem rekomendasi untuk mengukur kesalahan prediksi model. MAE memberikan informasi tentang seberapa dekat prediksi model dengan nilai aktual yang ada, dalam hal ini, rating yang diberikan oleh pengguna.
+
+Definisi MAE
+MAE dihitung sebagai rata-rata dari selisih absolut antara nilai yang diprediksi (prediksi rating) dan nilai yang sebenarnya (rating aktual). Rumus untuk menghitung MAE adalah sebagai berikut:
+![images](https://github.com/user-attachments/assets/ee92ab2e-5e78-40df-a1b8-0a739ddc4837)
+Di mana:
+
+( n ) = jumlah total prediksi (data pengujian).
+( yi ) = rating aktual dari item (film) yang ditonton oleh pengguna (data tes).
+( ŷ ) = rating yang diprediksi oleh model.
 
 ## Dampak Model terhadap Pemahaman Bisnis:
 
@@ -189,4 +154,6 @@ Secara keseluruhan, model rekomendasi ini tidak hanya memberikan nilai tambah ba
 
 ## Kesimpulan
 Proyek ini berhasil membangun sistem rekomendasi film menggunakan teknik Content-Based Filtering dan Collaborative Filtering. Hasil evaluasi menunjukkan bahwa sistem dapat memberikan rekomendasi yang relevan dan membantu pengguna dalam menemukan film yang sesuai dengan preferensi mereka.
+
+## Referensi
 
