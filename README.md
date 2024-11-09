@@ -27,7 +27,7 @@ Dataset yang digunakan dalam proyek ini terdiri dari beberapa file CSV, yaitu:
 - movies.csv: 34,208 baris dan 3 kolom (movieId, title, genres).
 - links.csv: 34,208 baris dan 2 kolom (movieId, imdbId).
 - tags.csv: 34,208 baris dan 4 kolom (userId, movieId, tag, timestamp).
-- ratings.csv: 4,144,672 baris dan 4 kolom (userId, movieId, rating, timestamp).
+- ratings.csv: 22,884,377  baris dan 4 kolom (userId, movieId, rating, timestamp).
 
 ### Penjelasan Fitur Dataset
 - movieId: ID unik untuk setiap film.
