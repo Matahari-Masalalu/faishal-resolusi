@@ -120,6 +120,34 @@ Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai ber
 
 
 ## Evaluation
+
+### Evaluasi Pada Conten-Based Filtering
+Untuk evaluasi pada Content-Based Filtering saya menggunakan beberapa metrik yaitu Accuracy, Precision, Recall, dan F1-Score
+-Akurasi Akurasi mengukur proporsi prediksi yang benar dari semua prediksi yang dibuat oleh model. Dalam sistem rekomendasi, akurasi dapat diartikan sebagai persentase rekomendasi yang tepat yang diberikan kepada pengguna.
+- Presisi Presisi mengukur proporsi rekomendasi yang benar di antara semua rekomendasi yang diberikan oleh model. Metrik ini penting untuk memastikan bahwa rekomendasi yang diberikan kepada pengguna benar-benar sesuai dengan apa yang mereka sukai.
+- Recall Recall mengukur proporsi rekomendasi yang benar di antara semua rekomendasi yang sebenarnya relevan. Metrik ini penting untuk memastikan bahwa model tidak melewatkan rekomendasi yang penting.
+- F1-score F1-score merupakan nilai harmonik dari presisi dan recall. Metrik ini memberikan gambaran yang lebih lengkap tentang performa model dibandingkan dengan hanya menggunakan presisi atau recall saja.
+
+Accuracy, Precision, Recall, dan F1-Score dihitung dengan rumus berikut:
+
+
+![image](https://github.com/user-attachments/assets/b90dd806-9141-4a0d-88a5-d93ffd13a8c3)
+
+
+Di mana:
+
+TP (True Positive): Jumlah rekomendasi yang benar dan relevan.
+TN (True Negative): Jumlah rekomendasi yang benar dan tidak relevan.
+FP (False Positive): Jumlah rekomendasi yang salah dan tidak relevan.
+FN (False Negative): Jumlah rekomendasi yang salah dan relevan.
+
+#### Hasil Evaluasi Menggunakan Accuracy, Precision, Recall, dan F1-Score
+
+![Cuplikan layar 2024-11-10 105806](https://github.com/user-attachments/assets/babf0f69-5397-4e96-b895-8e0c09037bc3)
+
+Secara keseluruhan, hasil evaluasi menunjukkan bahwa model memiliki performa yang baik dalam memberikan rekomendasi. Model cukup akurat dalam memprediksi rekomendasi yang relevan, dan berhasil menemukan sebagian besar rekomendasi yang relevan yang mungkin diberikan.
+
+### Eavluasi Pada Collaborative Filtering
 Evaluasi Model Rekomendasi Menggunakan Mean Absolute Error (MAE)
 
 Mean Absolute Error (MAE) adalah salah satu metode evaluasi yang umum digunakan dalam sistem rekomendasi untuk mengukur kesalahan prediksi model. MAE memberikan informasi tentang seberapa dekat prediksi model dengan nilai aktual yang ada, dalam hal ini, rating yang diberikan oleh pengguna.
