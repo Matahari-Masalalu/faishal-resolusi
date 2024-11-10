@@ -107,7 +107,13 @@ Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai ber
 
 #### Rekomendasi Pada Content Based Filtering
   
-![Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
+| movieId | title                                         |
+|---------|-----------------------------------------------|
+|   835   |                        Shaggy Dog, The (1959) |
+|   398   |                             Free Willy (1993) |
+|   4672  |                 Look Who's Talking Now (1993) |
+|   834   | Homeward Bound: The Incredible Journey (1993) |
+|  21089  |                                   Noi 4 (2014 |
 
 Rekomendasi di atas diambil berdasarkan kesamaan karakteristik dengan film "Free Willy 2: The Adventure Home (1995)". Dengan menggunakan metode Content-Based Filtering, kami berusaha untuk mencocokkan film yang memiliki genre dan tema yang mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
 
