@@ -109,6 +109,8 @@ Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai ber
   
 ![Cuplikan layar 2024-11-10 002311](https://github.com/user-attachments/assets/dece123f-03ed-49c3-981a-3f874148db52)
 
+Rekomendasi di atas diambil berdasarkan kesamaan karakteristik dengan film "Free Willy 2: The Adventure Home (1995)". Dengan menggunakan metode Content-Based Filtering, kami berusaha untuk mencocokkan film yang memiliki genre dan tema yang mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
+
 #### Rekomendasi Pada Item Based Filtering
 
 ![Cuplikan layar 2024-11-10 002544](https://github.com/user-attachments/assets/b75d7a2e-d2a5-4ac4-8f2c-132ededb8983)
