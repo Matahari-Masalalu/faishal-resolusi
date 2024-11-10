@@ -166,13 +166,16 @@ Accuracy, Precision, Recall, dan F1-Score dihitung dengan rumus berikut:
 Di mana:
 
 TP (True Positive): Jumlah rekomendasi yang benar dan relevan.
+
 TN (True Negative): Jumlah rekomendasi yang benar dan tidak relevan.
+
 FP (False Positive): Jumlah rekomendasi yang salah dan tidak relevan.
+
 FN (False Negative): Jumlah rekomendasi yang salah dan relevan.
 
 #### Hasil Evaluasi Menggunakan Accuracy, Precision, Recall, dan F1-Score
 
-![Cuplikan layar 2024-11-10 105806](https://github.com/user-attachments/assets/babf0f69-5397-4e96-b895-8e0c09037bc3)
+![Cuplikan layar 2024-11-10 111811](https://github.com/user-attachments/assets/33134969-1ac0-40fc-9fdd-b99612e01b31)
 
 Secara keseluruhan, hasil evaluasi menunjukkan bahwa model memiliki performa yang baik dalam memberikan rekomendasi. Model cukup akurat dalam memprediksi rekomendasi yang relevan, dan berhasil menemukan sebagian besar rekomendasi yang relevan yang mungkin diberikan.
 
