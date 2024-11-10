@@ -115,17 +115,38 @@ Parameter yang digunakan dalam Model Collaborative Filtering: adalah sebagai ber
 |   834   | Homeward Bound: The Incredible Journey (1993) |
 |  21089  |                                   Noi 4 (2014 |
 
-Rekomendasi di atas diambil berdasarkan kesamaan karakteristik dengan film "Free Willy 2: The Adventure Home (1995)". Dengan menggunakan metode Content-Based Filtering, kami berusaha untuk mencocokkan film yang memiliki genre dan tema yang mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
+Rekomendasi di atas diambil berdasarkan kesamaan karakteristik dengan film "Free Willy 2: The Adventure Home (1995)". Dengan menggunakan metode Content-Based Filtering, model berusaha untuk mencocokkan film yang memiliki genre dan tema yang mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
 
 #### Rekomendasi Pada Item Based Filtering
 
-![Cuplikan layar 2024-11-10 002544](https://github.com/user-attachments/assets/b75d7a2e-d2a5-4ac4-8f2c-132ededb8983)
+|   | title                                     | title    |
+|---|-------------------------------------------|----------|
+| 0 | Boxing Helena (1993)                      | 0.309421 |
+| 1 | Miracle on 34th Street (1994)             | 0.378249 |
+| 2 | Lawnmower Man 2: Beyond Cyberspace (1996) | 0.400886 |
+| 3 | Carrington (1995)                         | 0.407813 |
+| 4 | Steal Big, Steal Little (1995)            | 0.410505 |
+
+Rekomendasi di atas diambil berdasarkan kesamaan karakteristik film dengan indeks 2 yaitu ""Ace Ventura: Pet Detective (1994)"". Dengan menggunakan metode Item-Based Filtering, model berusaha untuk mencocokkan film yang memiliki rating mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
+
+
 
 #### Rekomendasi Pasa User Based Filtering
 
-![Cuplikan layar 2024-11-10 004327](https://github.com/user-attachments/assets/fcc1693e-1a16-44cd-9d99-d6d19ce04e15)
+|   | title                                             | Score |
+|---|---------------------------------------------------|-------|
+| 0 | Apollo 13 (1995)                                  | 4     |
+| 1 | Crimson Tide (1995)                               | 4     |
+| 2 | GoldenEye (1995)                                  | 4     |
+| 3 | Quiz Show (1994)                                  | 4     |
+| 4 | Interview with the Vampire: The Vampire Chroni... | 3     |
+| 5 | Ace Ventura: When Nature Calls (1995)             | 3     |
+| 6 | Lion King, The (1994)                             | 3     |
+| 7 | Babe (1995)                                       | 2     |
+| 8 | While You Were Sleeping (1995)                    | 2     |
+| 9 | Disclosure (1994)                                 | 1     |
 
-
+Rekomendasi di atas diambil berdasarkan kesamaan karakteristik film dengan User dengan id (3). Dengan menggunakan metode User-Based Filtering, model berusaha untuk mencocokkan film yang memiliki rating mirip, sehingga dapat memberikan pengalaman menyenangkan dan sesuai dengan preferensi.
 
 ## Evaluation
 
