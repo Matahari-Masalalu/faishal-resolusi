@@ -1,9 +1,1 @@
-Semester satu(fullstack web devoloper)
-  ^Bisa vuejs/reactjs
-  ^Bisa data basenya nodejs/mysql
-  ^Bisa banyak framework
-  ^+ i like django
-
-Semester dua(Machine Learning)
-Semester tiga(Bisa expert di numpy dan jadi data saintist)
-semester empat(Bisa AI)
+Menguasai AI dan Data Scientist
