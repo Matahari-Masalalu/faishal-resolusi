@@ -2,101 +2,99 @@
 
 ## Analisis Data: Dataset Bike Sharing
 
-- **Nama:** Faishal Anwar Hasyim
-- **Email:** anwarfaishal86@gmail.com
-- **ID Dicoding:** anwarfaishal86
+## Domain Proyek
+Proyek ini bertujuan untuk menganalisis data sewa sepeda menggunakan dataset bike sharing yang mencakup informasi mengenai waktu sewa, kondisi cuaca, dan karakteristik pengguna. Dengan meningkatnya popularitas penggunaan sepeda sebagai sarana transportasi, pemahaman tentang faktor-faktor yang mempengaruhi permintaan sepeda menjadi sangat penting. Analisis ini diharapkan dapat memberikan wawasan bagi penyedia layanan bike sharing untuk meningkatkan layanan dan memenuhi kebutuhan pengguna.
 
----
+## Business Understanding
 
-Data yang digunakan dapat diakses pada link [Bike Sharing Dataset - Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data).
+### Problem Statements
 
-## Deskripsi Dataset
-Dataset ini memiliki beberapa atribut sebagai berikut:
-* **instant:** Indeks tiap entri data.
-* **dteday:** Tanggal saat data diambil.
-* **season:** Musim (1: Musim Semi, 2: Musim Panas, 3: Musim Gugur, 4: Musim Dingin).
-* **yr:** Tahun (0: 2011, 1: 2012).
-* **mnth:** Bulan (1 hingga 12).
-* **hr:** Jam (0 hingga 23).
-* **holiday:** Apakah data diambil pada hari libur atau tidak.
-* **weekday:** Hari dalam seminggu saat data diambil.
-* **workingday:** Hari kerja.
-* **weathersit:** Kondisi cuaca.
-  * 1: Cerah.
-  * 2: Kabut + Mendung.
-  * 3: Salju Ringan.
-  * 4: Hujan Lebat.
-* **temp:** Suhu yang dinormalisasi dalam derajat Celsius.
-* **atemp:** Suhu perasaan yang dinormalisasi dalam derajat Celsius.
-* **hum:** Kelembaban yang dinormalisasi.
-* **windspeed:** Kecepatan angin yang dinormalisasi.
-* **casual:** Jumlah pengguna kasual.
-* **registered:** Jumlah pengguna terdaftar.
-* **cnt:** Jumlah total sepeda yang disewakan.
+- Pernyataan Masalah: Bagaimana faktor-faktor seperti cuaca, musim, dan hari libur mempengaruhi permintaan sewa sepeda?
 
-## Menentukan Pertanyaan Bisnis
-1. Apa dampak cuaca terhadap permintaan sepeda?
-2. Bagaimana pola penggunaan sepeda berubah seiring dengan musim?
-3. Apa pengaruh hari libur terhadap frekuensi penggunaan sepeda?
-4. Bagaimana perbandingan antara pengguna sepeda terdaftar dan pengguna kasual dalam hal penggunaan sepeda?
+### Goals
+- Jawaban pernyataan masalah: Menganalisis data untuk mengidentifikasi pola dan tren dalam permintaan sewa sepeda berdasarkan berbagai faktor.
 
-## Import Semua Packages/Library yang Digunakan
-- **NumPy:** Pustaka untuk operasi matematika dan manipulasi array multidimensi.
-- **Pandas:** Pustaka untuk manipulasi dan analisis data.
-- **Matplotlib:** Pustaka untuk membuat visualisasi data.
-- **Seaborn:** Pustaka untuk visualisasi statistik yang dibangun di atas Matplotlib.
+### Solution Statement
+- Penggunaan Analisis Data: Menggunakan teknik analisis data eksploratif untuk memahami hubungan antara variabel yang mempengaruhi permintaan sewa sepeda.
+- Data Preparation: Proyek ini akan menggunakan teknik data preparation untuk meningkatkan kualitas data dan performa analisis, termasuk pembersihan data dan normalisasi.
 
-## Data Wrangling
+## Data Understanding
 
-### Gathering Data
-Data diambil dari file CSV "hour.csv" dan "day.csv" menggunakan Pandas.
+Sumber/referensi: [Bike Sharing Dataset - Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data)
 
-### Assessing Data
-Informasi tentang struktur dan isi data diperoleh melalui metode `info()` dan `describe()`.
+Dataset yang digunakan pada proyek ini adalah dataset bike sharing yang berisi informasi historis tentang sewa sepeda. Dataset ini memiliki beberapa atribut yang mencakup waktu sewa, kondisi cuaca, dan karakteristik pengguna.
 
-### Cek Missing Value dan Duplikat
-Tidak ditemukan missing value atau duplikat dalam dataset.
+Variabel-variabel pada dataset adalah sebagai berikut:
+- **instant**: Indeks tiap entri data.
+- **dteday**: Tanggal saat data diambil.
+- **season**: Musim (1: Musim Semi, 2: Musim Panas, 3: Musim Gugur, 4: Musim Dingin).
+- **yr**: Tahun (0: 2011, 1: 2012).
+- **mnth**: Bulan (1 hingga 12).
+- **hr**: Jam (0 hingga 23).
+- **holiday**: Apakah data diambil ketika hari libur atau tidak.
+- **weekday**: Hari dalam seminggu saat data diambil.
+- **workingday**: Hari kerja.
+- **weathersit**: Kondisi cuaca.
+  - 1: Cerah
+  - 2: Kabut + Mendung
+  - 3: Salju Ringan
+  - 4: Hujan Lebat
+- **temp**: Suhu yang dinormalisasi dalam derajat Celsius.
+- **atemp**: Suhu perasaan yang dinormalisasi dalam derajat Celsius.
+- **hum**: Kelembaban yang dinormalisasi.
+- **windspeed**: Kecepatan angin yang dinormalisasi.
+- **casual**: Jumlah pengguna kasual.
+- **registered**: Jumlah pengguna terdaftar.
+- **cnt**: Jumlah total sepeda yang disewakan.
 
-### Cleaning Data
-Proses cleaning dilakukan untuk memperbaiki tipe data dari atribut `dteday` menjadi `datetime64`.
+## Exploratory Data Analysis
 
-## Exploratory Data Analysis (EDA)
-Melakukan analisis eksplorasi untuk memahami karakteristik data dan visualisasi distribusi data.
+### Total Volume Sewa Sepeda
 
-## Visualization & Explanatory Analysis
-Mengganti nilai-nilai dalam DataFrame untuk analisis yang lebih deskriptif dan memeriksa nilai unik dari kolom tertentu.
+Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteristik pengguna memberikan wawasan tentang pola dan tren dalam penggunaan sepeda.
 
-## Pertanyaan Analisis
-### 1. Berapa banyak orang yang menyewa sepeda, per jam, hari, bulan, dan tahun?
-### 2. Apakah cuaca buruk mengurangi jumlah peminjaman?
-### 3. Apakah ada peningkatan yang konsisten pada musim tertentu?
-### 4. Apakah ada peningkatan atau penurunan yang signifikan selama hari libur?
-### 5. Apa perbandingan antara pengguna terdaftar dan pengguna kasual dalam penggunaan sepeda?
+![Total Volume Sewa Sepeda](https://github.com/user-attachments/assets/3a115df8-8f77-4c58-964c-9c860e53c5e1)
 
-## Kesimpulan
 ### Pengaruh Cuaca terhadap Permintaan Sepeda
 
-![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9d447136-8f64-4ed1-a435-a3ebae491284)
+Analisis ini menunjukkan bagaimana kondisi cuaca mempengaruhi jumlah permintaan sewa sepeda.
 
-Rata-rata permintaan sepeda lebih tinggi pada hari-hari dengan cuaca cerah.
+![Pengaruh Cuaca](https://github.com/user-attachments/assets/d7b7567c-b536-4a4f-8cae-107e9ff0f6d8)
 
-### Variasi Musiman dalam Penggunaan Sepeda
+### Tren Musiman dalam Penggunaan Sepeda
 
-![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/1a1e6d09-ce25-483b-bfd7-974c89be5cd2)
+Pola penggunaan sepeda berdasarkan musim memberikan pemahaman tentang kapan permintaan sewa sepeda meningkat atau menurun.
 
-Permintaan sepeda paling tinggi terjadi selama musim gugur.
+![Tren Musiman](https://github.com/user-attachments/assets/454289a1-df2b-48e5-b9cb-e9a98aaa76ed)
 
-### Pengaruh Hari Libur terhadap Penggunaan Sepeda
+### Pengaruh Hari Libur
 
-![Cuplikan layar 2024-11-16 145301](https://github.com/user-attachments/assets/f84a52dd-3415-41e0-9caf-65fe440f9a81)
+Analisis menunjukkan perbandingan permintaan sewa sepeda pada hari libur dan hari biasa.
 
-Penggunaan sepeda cenderung lebih tinggi pada hari-hari bukan libur.
+![Pengaruh Hari Libur](https://github.com/user-attachments/assets/0179068c-ceee-4743-a1dd-70ac9c614b16)
 
-### Perbandingan Penggunaan Sepeda oleh Pengguna Terdaftar dan Kasual
+## Data Preparation
 
-![Cuplikan layar 2024-11-16 145342](https://github.com/user-attachments/assets/581f86d5-e46d-47d9-85cf-2b3e6b628e4a)
+Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
 
-Pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda.
+### Data Cleaning
+
+1. ** Menghapus duplikat dan nilai yang hilang**: Memastikan tidak ada data yang duplikat atau hilang dalam dataset.
+2. **Mengubah tipe data**: Mengonversi kolom `dteday` menjadi format datetime untuk analisis yang lebih baik.
+
+### Data Splitting  
+Dataset dibagi menjadi dua bagian: data untuk analisis dan data untuk visualisasi.
+
+## Modeling
+
+Analisis dilakukan untuk menjawab pertanyaan bisnis yang telah ditentukan, menggunakan visualisasi untuk menggambarkan hasil.
+
+## Evaluation
+
+Hasil analisis menunjukkan bahwa faktor cuaca, musim, dan hari libur memiliki pengaruh signifikan terhadap permintaan sewa sepeda. Data yang diperoleh dapat digunakan untuk meningkatkan layanan bike sharing.
+
+## Kesimpulan
+Analisis ini memberikan wawasan yang berharga tentang faktor-faktor yang mempengaruhi permintaan sewa sepeda. Dengan memahami pola dan tren ini, penyedia layanan dapat mengoptimalkan operasional dan meningkatkan pengalaman pengguna.
 
 ## Download Dataset
 Dataset yang telah dibersihkan dapat diunduh melalui [data_hour.csv](data_hour.csv).
