@@ -1,4 +1,4 @@
-# Laporan Proyek Analisis Data - Faishal Anwar Hasyim
+ # Laporan Proyek Analisis Data - Faishal Anwar Hasyim
 
 ## Analisis Data: Dataset Bike Sharing
 
@@ -61,10 +61,11 @@ Tahap **Data Preparation** adalah langkah penting dalam proses analisis data, di
 
 Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteristik pengguna memberikan wawasan tentang pola dan tren dalam penggunaan sepeda.
 
-![Cuplikan layar 2024-11-16 145947](https://github.com/user-attachments/assets/0f8c30cb-bd6e-46fe-8177-fd37614c6f5b)
-![Cuplikan layar 2024-11-16 145938](https://github.com/user-attachments/assets/ef3239e8-8128-4522-bbd7-d143306f3c37)
-![Cuplikan layar 2024-11-16 150012](https://github.com/user-attachments/assets/a8ccaefb-8bdc-447f-9b6e-28317a129915)
-![Cuplikan layar 2024-11-16 150000](https://github.com/user-attachments/assets/6ef29c80-80a3-4d57-bfc4-554f34a2badd)
+![Cuplikan layar 2024-11-16 211717](https://github.com/user-attachments/assets/416c0c10-f718-41a8-b108-6f24020d604e)
+![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234)
+![Cuplikan layar 2024-11-16 211653](https://github.com/user-attachments/assets/787bee62-5459-410b-937d-7bf4619a8bdb)
+![Cuplikan layar 2024-11-16 211903](https://github.com/user-attachments/assets/a645f6f0-1f61-4f8f-a9c1-70252f9628a7)
+
 
 ### Pengaruh Cuaca terhadap Permintaan Sepeda Per hari
 
