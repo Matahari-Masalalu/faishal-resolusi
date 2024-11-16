@@ -66,7 +66,7 @@ Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteri
 ![Cuplikan layar 2024-11-16 150012](https://github.com/user-attachments/assets/a8ccaefb-8bdc-447f-9b6e-28317a129915)
 ![Cuplikan layar 2024-11-16 150000](https://github.com/user-attachments/assets/6ef29c80-80a3-4d57-bfc4-554f34a2badd)
 
-### Pengaruh Cuaca terhadap Permintaan Sepeda
+### Pengaruh Cuaca terhadap Permintaan Sepeda Per hari
 
 ![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
 
@@ -112,8 +112,8 @@ Proyek ini bertujuan untuk menganalisis data sepeda dan menyajikannya dalam bent
 ## Penggunaan
 
 1. Instal semua dependensi dengan menjalankan perintah berikut: ```pip install pandas matplotlib seaborn streamlit```
-2. Pastikan Anda memiliki kumpulan data "Berbagi Sepeda" yang dapat diakses dari tautan yang disediakan dan simpan di folder `kumpulan data`.
-3. Jalankan aplikasi dengan perintah berikut: ```streamlit run app.py```
+2. Pastikan Anda memiliki kumpulan data "bike share" yang dapat diakses dari tautan yang disediakan dan simpan di folder `Dataset`.
+3. Jalankan aplikasi dengan perintah berikut: ```streamlit run dashboard.py```
 4. Aplikasi akan berjalan di browser Anda, dan Anda dapat mulai menjelajahi analisis data sepeda.
 
 ## Fitur Dasbor
