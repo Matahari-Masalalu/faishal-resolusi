@@ -1,66 +1,98 @@
-### Rencana Pengembangan Diri
+# Laporan Proyek Analisis Data - Faishal Anwar Hasyim
 
-#### Identifikasi Area Pengembangan Diri
+## Analisis Data: Dataset Bike Sharing
 
-Salah satu area pengembangan diri yang ingin saya kembangkan adalah keterampilan komunikasi. Keterampilan komunikasi yang efektif sangat penting dalam berbagai aspek kehidupan, baik dalam konteks profesional maupun personal. Selain itu, dalam proses ini, saya juga ingin berfokus pada pengembangan manajemen waktu dan peningkatan rasa percaya diri saya, dua aspek yang menjadi kekurangan utama saya.
+- **Nama:** Faishal Anwar Hasyim
+- **Email:** anwarfaishal86@gmail.com
+- **ID Dicoding:** anwarfaishal86
 
-#### Analisis Diri Menggunakan Metode SWOT
+---
 
-Untuk memahami posisi saya saat ini dalam keterampilan komunikasi, serta manajemen waktu dan rasa percaya diri, saya melakukan analisis SWOT berikut:
+Data yang digunakan dapat diakses pada link [Bike Sharing Dataset - Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data).
 
-- **Strengths (Kekuatan)**: 
-  1. Memiliki pengetahuan yang baik tentang topik yang dibicarakan.
-  2. Dikenal sebagai pendengar yang baik, sehingga dapat memahami perspektif orang lain.
+## Deskripsi Dataset
+Dataset ini memiliki beberapa atribut sebagai berikut:
+* **instant:** Indeks tiap entri data.
+* **dteday:** Tanggal saat data diambil.
+* **season:** Musim (1: Musim Semi, 2: Musim Panas, 3: Musim Gugur, 4: Musim Dingin).
+* **yr:** Tahun (0: 2011, 1: 2012).
+* **mnth:** Bulan (1 hingga 12).
+* **hr:** Jam (0 hingga 23).
+* **holiday:** Apakah data diambil pada hari libur atau tidak.
+* **weekday:** Hari dalam seminggu saat data diambil.
+* **workingday:** Hari kerja.
+* **weathersit:** Kondisi cuaca.
+  * 1: Cerah.
+  * 2: Kabut + Mendung.
+  * 3: Salju Ringan.
+  * 4: Hujan Lebat.
+* **temp:** Suhu yang dinormalisasi dalam derajat Celsius.
+* **atemp:** Suhu perasaan yang dinormalisasi dalam derajat Celsius.
+* **hum:** Kelembaban yang dinormalisasi.
+* **windspeed:** Kecepatan angin yang dinormalisasi.
+* **casual:** Jumlah pengguna kasual.
+* **registered:** Jumlah pengguna terdaftar.
+* **cnt:** Jumlah total sepeda yang disewakan.
 
-- **Weaknesses (Kelemahan)**: 
-  1. Kurang dapat memanage waktu, sehingga sering merasa terburu-buru dalam mempersiapkan presentasi.
-  2. Rasa percaya diri saat berbicara di depan umum masih rendah, yang menghambat kemampuan saya untuk menyampaikan ide dengan baik.
+## Menentukan Pertanyaan Bisnis
+1. Apa dampak cuaca terhadap permintaan sepeda?
+2. Bagaimana pola penggunaan sepeda berubah seiring dengan musim?
+3. Apa pengaruh hari libur terhadap frekuensi penggunaan sepeda?
+4. Bagaimana perbandingan antara pengguna sepeda terdaftar dan pengguna kasual dalam hal penggunaan sepeda?
 
-- **Opportunities (Peluang)**: 
-  1. Terdapat banyak kursus dan workshop tentang komunikasi dan manajemen waktu yang dapat diikuti, baik secara daring maupun luring.
-  2. Banyak kesempatan untuk melakukan presentasi di lingkungan kampus dan komunitas.
+## Import Semua Packages/Library yang Digunakan
+- **NumPy:** Pustaka untuk operasi matematika dan manipulasi array multidimensi.
+- **Pandas:** Pustaka untuk manipulasi dan analisis data.
+- **Matplotlib:** Pustaka untuk membuat visualisasi data.
+- **Seaborn:** Pustaka untuk visualisasi statistik yang dibangun di atas Matplotlib.
 
-- **Threats (Ancaman)**: 
-  1. Persaingan di dunia kerja yang menuntut kemampuan komunikasi dan manajemen waktu yang mumpuni.
-  2. Stres dan kecemasan saat berbicara di depan umum yang dapat menghambat perkembangan.
+## Data Wrangling
 
-#### Tujuan yang Ingin Dicapai Menggunakan Prinsip SMART
+### Gathering Data
+Data diambil dari file CSV "hour.csv" dan "day.csv" menggunakan Pandas.
 
-Dengan menggunakan prinsip SMART (Specific, Measurable, Achievable, Relevant, Time-bound), berikut adalah tujuan yang ingin saya capai dalam pengembangan keterampilan komunikasi, manajemen waktu, dan peningkatan rasa percaya diri:
+### Assessing Data
+Informasi tentang struktur dan isi data diperoleh melalui metode `info()` dan `describe()`.
 
-- **Specific**: Saya ingin meningkatkan keterampilan berbicara di depan umum, dengan fokus pada penyampaian presentasi yang jelas dan menarik, serta meningkatkan kemampuan manajemen waktu saya dalam persiapan.
-- **Measurable**: Saya akan melakukan presentasi di depan kelompok minimal satu kali setiap bulan dan meminta umpan balik dari peserta. Selain itu, saya akan menggunakan teknik manajemen waktu seperti to-do list dan pengingat untuk menyelesaikan tugas tepat waktu.
-- **Achievable**: Saya akan mengikuti dua kursus daring tentang komunikasi dan manajemen waktu dalam waktu enam bulan ke depan.
-- **Relevant**: Peningkatan keterampilan ini sangat relevan dengan tujuan karier saya di bidang pemasaran, di mana komunikasi yang efektif dan manajemen waktu yang baik sangat diperlukan.
-- **Time-bound**: Saya ingin mencapai peningkatan yang signifikan dalam keterampilan ini dalam waktu satu tahun.
+### Cek Missing Value dan Duplikat
+Tidak ditemukan missing value atau duplikat dalam dataset.
 
-#### Timeline untuk Mencapai Tujuan
+### Cleaning Data
+Proses cleaning dilakukan untuk memperbaiki tipe data dari atribut `dteday` menjadi `datetime64`.
 
-1. **Bulan 1–3**: 
-   - Daftar dan mulai kursus daring mengenai komunikasi dan manajemen waktu.
-   - Terapkan teknik manajemen waktu dengan membuat jadwal harian dan to-do list setiap pagi untuk mengatur waktu belajar dan latihan komunikasi.
+## Exploratory Data Analysis (EDA)
+Melakukan analisis eksplorasi untuk memahami karakteristik data dan visualisasi distribusi data.
 
-2. **Bulan 4–6**: 
-   - Selesaikan kursus dan terapkan teknik yang dipelajari.
-   - Praktik berbicara di depan cermin setiap minggu selama 15 menit.
-   - Bergabung dengan kelompok diskusi di kampus sebagai kesempatan berbicara di depan umum dan meminta umpan balik dari anggota.
+## Visualization & Explanatory Analysis
+Mengganti nilai-nilai dalam DataFrame untuk analisis yang lebih deskriptif dan memeriksa nilai unik dari kolom tertentu.
 
-3. **Bulan 7–9**: 
-   - Lakukan presentasi pertama di depan teman-teman dengan menggunakan jadwal persiapan yang sudah dirancang.
-   - Minta umpan balik terperinci dari audiens untuk mengidentifikasi area yang perlu ditingkatkan.
+## Pertanyaan Analisis
+### 1. Berapa banyak orang yang menyewa sepeda, per jam, hari, bulan, dan tahun?
+### 2. Apakah cuaca buruk mengurangi jumlah peminjaman?
+### 3. Apakah ada peningkatan yang konsisten pada musim tertentu?
+### 4. Apakah ada peningkatan atau penurunan yang signifikan selama hari libur?
+### 5. Apa perbandingan antara pengguna terdaftar dan pengguna kasual dalam penggunaan sepeda?
 
-4. **Bulan 10–12**: 
-   - Evaluasi kemajuan dari umpan balik yang diterima.
-   - Lakukan presentasi kedua, dengan meningkatkan elemen yang kurang dari presentasi sebelumnya dan perbaiki teknik manajemen waktu selama persiapan.
+## Kesimpulan
+### Pengaruh Cuaca terhadap Permintaan Sepeda
+Rata-rata permintaan sepeda lebih tinggi pada hari-hari dengan cuaca cerah.
 
-#### Tantangan dan Adaptasi
+### Variasi Musiman dalam Penggunaan Sepeda
+Permintaan sepeda paling tinggi terjadi selama musim gugur.
 
-Tantangan yang mungkin muncul dalam mencapai tujuan ini antara lain:
+### Pengaruh Hari Libur terhadap Penggunaan Sepeda
+Penggunaan sepeda cenderung lebih tinggi pada hari-hari bukan libur.
 
-1. **Kurangnya Rasa Percaya Diri**: Kecemasan saat berbicara di depan orang banyak sering kali membuat saya merasa tidak percaya diri. Untuk mengatasi ini, saya akan mempersiapkan diri dengan matang dan melibatkan diri dalam latihan berbicara di depan kelompok kecil sebelum melakukan presentasi yang lebih besar.
+### Perbandingan Penggunaan Sepeda oleh Pengguna Terdaftar dan Kasual
+Pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda.
 
-2. **Kesulitan dalam Manajemen Waktu**: Dengan berbagai aktivitas dan tanggung jawab, mungkin sulit untuk menyisihkan waktu untuk berlatih. Saya akan menetapkan batas waktu untuk setiap tugas dan menggunakan teknik seperti "Pomodoro" untuk meningkatkan fokus dan produktivitas.
+### Hubungan antara Suhu dan Penggunaan Sepeda
+Terdapat hubungan positif antara suhu dan jumlah penggunaan sepeda, serta kelembapan dan kecepatan angin yang mempengaruhi permintaan sepeda dalam rentang tertentu.
 
-3. **Kurangnya Umpan Balik Konstruktif**: Terkadang, sulit untuk mendapatkan umpan balik yang jujur. Saya akan mencari mentor atau teman yang berpengalaman untuk memberikan masukan yang bermanfaat demi peningkatan keterampilan komunikasi saya.
+## Download Dataset
+Dataset yang telah dibersihkan dapat diunduh melalui [data_hour.csv](data_hour.csv).
 
-Dengan mengikuti rencana pengembangan diri yang sistematis ini, saya yakin akan mampu meningkatkan keterampilan komunikasi, manajemen waktu, dan rasa percaya diri saya. Pengembangan diri adalah proses berkelanjutan, dan dengan menetapkan tujuan yang jelas serta strategi untuk mengatasi tantangan, saya yakin akan mencapai hasil yang diinginkan.
+## Requirements
+Untuk menjalankan proyek ini, Anda perlu menginstal paket-paket berikut:
+```bash
+pip install numpy pandas matplotlib seaborn
