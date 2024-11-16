@@ -75,19 +75,28 @@ Mengganti nilai-nilai dalam DataFrame untuk analisis yang lebih deskriptif dan m
 
 ## Kesimpulan
 ### Pengaruh Cuaca terhadap Permintaan Sepeda
+
+![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9d447136-8f64-4ed1-a435-a3ebae491284)
+
 Rata-rata permintaan sepeda lebih tinggi pada hari-hari dengan cuaca cerah.
 
 ### Variasi Musiman dalam Penggunaan Sepeda
+
+![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/1a1e6d09-ce25-483b-bfd7-974c89be5cd2)
+
 Permintaan sepeda paling tinggi terjadi selama musim gugur.
 
 ### Pengaruh Hari Libur terhadap Penggunaan Sepeda
+
+![Cuplikan layar 2024-11-16 145301](https://github.com/user-attachments/assets/f84a52dd-3415-41e0-9caf-65fe440f9a81)
+
 Penggunaan sepeda cenderung lebih tinggi pada hari-hari bukan libur.
 
 ### Perbandingan Penggunaan Sepeda oleh Pengguna Terdaftar dan Kasual
-Pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda.
 
-### Hubungan antara Suhu dan Penggunaan Sepeda
-Terdapat hubungan positif antara suhu dan jumlah penggunaan sepeda, serta kelembapan dan kecepatan angin yang mempengaruhi permintaan sepeda dalam rentang tertentu.
+![Cuplikan layar 2024-11-16 145342](https://github.com/user-attachments/assets/581f86d5-e46d-47d9-85cf-2b3e6b628e4a)
+
+Pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda.
 
 ## Download Dataset
 Dataset yang telah dibersihkan dapat diunduh melalui [data_hour.csv](data_hour.csv).
