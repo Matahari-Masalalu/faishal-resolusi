@@ -53,7 +53,10 @@ Variabel-variabel pada dataset adalah sebagai berikut:
 
 Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteristik pengguna memberikan wawasan tentang pola dan tren dalam penggunaan sepeda.
 
-![Total Volume Sewa Sepeda](https://github.com/user-attachments/assets/3a115df8-8f77-4c58-964c-9c860e53c5e1)
+![Cuplikan layar 2024-11-16 145947](https://github.com/user-attachments/assets/0f8c30cb-bd6e-46fe-8177-fd37614c6f5b)
+![Cuplikan layar 2024-11-16 145938](https://github.com/user-attachments/assets/ef3239e8-8128-4522-bbd7-d143306f3c37)
+![Cuplikan layar 2024-11-16 150012](https://github.com/user-attachments/assets/a8ccaefb-8bdc-447f-9b6e-28317a129915)
+![Cuplikan layar 2024-11-16 150000](https://github.com/user-attachments/assets/6ef29c80-80a3-4d57-bfc4-554f34a2badd)
 
 ### Pengaruh Cuaca terhadap Permintaan Sepeda
 
@@ -65,13 +68,15 @@ Analisis ini menunjukkan bagaimana kondisi cuaca mempengaruhi jumlah permintaan 
 
 Pola penggunaan sepeda berdasarkan musim memberikan pemahaman tentang kapan permintaan sewa sepeda meningkat atau menurun.
 
-![Tren Musiman](https://github.com/user-attachments/assets/454289a1-df2b-48e5-b9cb-e9a98aaa76ed)
+![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
+
 
 ### Pengaruh Hari Libur
 
 Analisis menunjukkan perbandingan permintaan sewa sepeda pada hari libur dan hari biasa.
 
-![Pengaruh Hari Libur](https://github.com/user-attachments/assets/0179068c-ceee-4743-a1dd-70ac9c614b16)
+![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/105c236c-6430-4e8d-a424-4369e6e44a74)
+
 
 ## Data Preparation
 
