@@ -92,7 +92,7 @@ Hasil analisis menunjukkan bahwa penggunaan sepeda cenderung lebih tinggi pada h
 
 Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditemukan bahwa pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda. Pengguna terdaftar, yang biasanya merupakan individu yang telah mendaftar untuk menggunakan layanan secara rutin, menunjukkan pola penggunaan yang lebih teratur dan terjadwal. Mereka cenderung menggunakan sepeda untuk perjalanan harian mereka, baik untuk bekerja, berolahraga, maupun aktivitas sehari-hari lainnya. Di sisi lain, pengguna kasual sering kali menggunakan sepeda secara sporadis, mungkin hanya saat mereka berlibur atau dalam situasi tertentu. Hal ini menunjukkan bahwa penyedia layanan sepeda perlu mengembangkan strategi yang berbeda untuk menarik kedua jenis pengguna ini. Misalnya, untuk pengguna terdaftar, mereka dapat menawarkan program loyalitas atau diskon untuk penyewaan jangka panjang, sementara untuk pengguna kasual, mereka bisa menawarkan paket promosi atau pengalaman unik yang mendorong mereka untuk mencoba layanan sepeda lebih sering.
 
-# Dasbor Analisis Data Berbagi Sepeda
+# Dasbor Analisis Data Bike Sharing
 
 ![Cuplikan layar 2024-11-16 194130](https://github.com/user-attachments/assets/f60b6518-0257-4f79-b703-847a770b881e)
 
@@ -124,17 +124,9 @@ Proyek ini bertujuan untuk menganalisis data sepeda dan menyajikannya dalam bent
 - Analisis dampak liburan terhadap penggunaan sepeda.
 
 ## Kesimpulan
-Analisis ini memberikan wawasan yang berharga tentang berbagai faktor yang mempengaruhi permintaan sewa sepeda. Melalui eksplorasi data yang mendalam, kami telah mengidentifikasi bahwa cuaca, hari kerja, dan karakteristik pengguna berperan penting dalam menentukan pola penggunaan sepeda.
+Analisis data Bike Sharing mengungkapkan faktor-faktor kunci yang mempengaruhi permintaan sewa sepeda, termasuk cuaca, hari kerja, dan karakteristik pengguna. Cuaca cerah meningkatkan permintaan, sedangkan hari kerja mendorong penggunaan sepeda sebagai transportasi. Pengguna terdaftar menunjukkan pola penggunaan yang lebih konsisten dibandingkan pengguna kasual.
 
-Meskipun terdapat beberapa asumsi awal tentang pengaruh signifikan dari faktor-faktor musiman, analisis menunjukkan bahwa variasi permintaan sewa sepeda tidak selalu berkorelasi langsung dengan perubahan musim. Ini menunjukkan bahwa pengguna sepeda mungkin lebih fleksibel dan adaptif terhadap kondisi cuaca, serta mengindikasikan bahwa penyedia layanan harus mempertimbangkan faktor-faktor lain yang lebih mempengaruhi keputusan pengguna untuk menyewa sepeda.
-
-Selain itu, temuan mengenai perbedaan antara pengguna terdaftar dan pengguna kasual memberikan wawasan penting bagi penyedia layanan. Pengguna terdaftar, yang menunjukkan pola penggunaan yang lebih konsisten, dapat menjadi fokus utama untuk program loyalitas dan penawaran khusus, sementara pengguna kasual dapat dijangkau melalui promosi yang menarik dan acara komunitas yang mendorong partisipasi.
-
-Dengan memahami pola dan tren ini, penyedia layanan sepeda dapat mengoptimalkan operasional mereka dengan lebih baik. Misalnya, mereka dapat menyesuaikan jumlah armada sepeda yang tersedia berdasarkan analisis permintaan yang telah diidentifikasi, serta merencanakan promosi atau acara yang sesuai dengan kebiasaan pengguna.
-
-Selain itu, analisis ini juga menyoroti pentingnya meningkatkan pengalaman pengguna melalui layanan yang lebih responsif dan inovatif. Penyedia layanan dapat mempertimbangkan untuk memperkenalkan fitur-fitur baru, seperti aplikasi mobile yang lebih baik untuk pemesanan dan pelacakan, atau program pendidikan yang mengedukasi pengguna tentang manfaat bersepeda dan cara aman bersepeda di berbagai kondisi.
-
-Secara keseluruhan, hasil dari analisis ini tidak hanya memberikan pemahaman yang lebih dalam tentang faktor-faktor yang mempengaruhi permintaan sewa sepeda, tetapi juga membuka peluang untuk inovasi dan peningkatan layanan yang dapat meningkatkan kepuasan pengguna dan mendorong lebih banyak orang untuk memilih sepeda sebagai pilihan transportasi yang berkelanjutan. Dengan pendekatan yang tepat, penyedia layanan dapat berkontribusi pada pengembangan kota yang lebih ramah lingkungan dan berkelanjutan, sekaligus meningkatkan kesehatan dan kesejahteraan masyarakat.
+Temuan ini memberikan peluang bagi penyedia layanan untuk mengoptimalkan operasional, menyesuaikan armada sepeda sesuai permintaan, dan menawarkan program menarik bagi pengguna. Peningkatan layanan, seperti aplikasi mobile yang lebih baik, dapat meningkatkan kepuasan pengguna dan mendorong lebih banyak orang untuk memilih sepeda sebagai transportasi berkelanjutan.
 
 ## Referensi
 1. Lakshmipathi N  - Kagle. Diakses pada 16 November 2024 dari (https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data)
