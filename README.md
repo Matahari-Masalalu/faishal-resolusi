@@ -59,11 +59,11 @@ Tahap **Data Preparation** adalah langkah penting dalam proses analisis data, di
 
 ### Total Volume Sewa Sepeda
 
-Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteristik pengguna memberikan wawasan tentang pola dan tren dalam penggunaan sepeda.
+Analisis jumlah total sewa sepeda berdasarkan Jam, Hari, Bulan, dan Tahun.
 
-![Cuplikan layar 2024-11-16 211717](https://github.com/user-attachments/assets/416c0c10-f718-41a8-b108-6f24020d604e)
-![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234)
 ![Cuplikan layar 2024-11-16 211653](https://github.com/user-attachments/assets/787bee62-5459-410b-937d-7bf4619a8bdb)
+![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234)
+![Cuplikan layar 2024-11-16 211717](https://github.com/user-attachments/assets/416c0c10-f718-41a8-b108-6f24020d604e)
 ![Cuplikan layar 2024-11-16 211903](https://github.com/user-attachments/assets/a645f6f0-1f61-4f8f-a9c1-70252f9628a7)
 
 
