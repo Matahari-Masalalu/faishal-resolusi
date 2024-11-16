@@ -92,6 +92,20 @@ Hasil analisis menunjukkan bahwa penggunaan sepeda cenderung lebih tinggi pada h
 
 Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditemukan bahwa pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda. Pengguna terdaftar, yang biasanya merupakan individu yang telah mendaftar untuk menggunakan layanan secara rutin, menunjukkan pola penggunaan yang lebih teratur dan terjadwal. Mereka cenderung menggunakan sepeda untuk perjalanan harian mereka, baik untuk bekerja, berolahraga, maupun aktivitas sehari-hari lainnya. Di sisi lain, pengguna kasual sering kali menggunakan sepeda secara sporadis, mungkin hanya saat mereka berlibur atau dalam situasi tertentu. Hal ini menunjukkan bahwa penyedia layanan sepeda perlu mengembangkan strategi yang berbeda untuk menarik kedua jenis pengguna ini. Misalnya, untuk pengguna terdaftar, mereka dapat menawarkan program loyalitas atau diskon untuk penyewaan jangka panjang, sementara untuk pengguna kasual, mereka bisa menawarkan paket promosi atau pengalaman unik yang mendorong mereka untuk mencoba layanan sepeda lebih sering.
 
+## Penggunaan Dashboard
+
+1. Instal semua dependensi dengan menjalankan perintah berikut: ```pip install pandas matplotlib seaborn streamlit```
+2. Pastikan Anda memiliki kumpulan data "Berbagi Sepeda" yang dapat diakses dari tautan yang disediakan dan simpan di folder `kumpulan data`.
+3. Jalankan aplikasi dengan perintah berikut: ```streamlit run app.py```
+4. Aplikasi akan berjalan di browser Anda, dan Anda dapat mulai menjelajahi analisis data sepeda.
+
+## Fitur Dasboard
+
+- Analisis total penyewaan sepeda per tahun.
+- Analisis dampak cuaca buruk terhadap permintaan sepeda.
+- Analisis tren musiman penggunaan sepeda.
+- Analisis dampak liburan terhadap penggunaan sepeda.
+
 ## Kesimpulan
 Analisis ini memberikan wawasan yang berharga tentang berbagai faktor yang mempengaruhi permintaan sewa sepeda. Melalui eksplorasi data yang mendalam, kami telah mengidentifikasi bahwa cuaca, hari kerja, dan karakteristik pengguna berperan penting dalam menentukan pola penggunaan sepeda.
 
