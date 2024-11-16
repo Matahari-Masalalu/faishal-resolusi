@@ -62,9 +62,20 @@ Tahap **Data Preparation** adalah langkah penting dalam proses analisis data, di
 Analisis jumlah total sewa sepeda berdasarkan Jam, Hari, Bulan, dan Tahun.
 
 ![Cuplikan layar 2024-11-16 211653](https://github.com/user-attachments/assets/787bee62-5459-410b-937d-7bf4619a8bdb)
-![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234)
+
+Bisa dilihat bahwa angka permintaan sepeda mengalami penurunan mulai dari jam 00.00 hingga mencapai titik terendah di jam 04.00 dan mencapai puncak permintaan pada jam 17.00.
+
+![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234) 
+
+Bisa dilihat bahwa hari tidak mempengaruhi pada angka permintaan sepeda secara signifikan
+
 ![Cuplikan layar 2024-11-16 211717](https://github.com/user-attachments/assets/416c0c10-f718-41a8-b108-6f24020d604e)
+
+Bisa dilihat bahwa angka permintaan sepeda mengalami penurunan mulai dari bulan Agustus hingga mencapai titik terendah di bulan Januari
+
 ![Cuplikan layar 2024-11-16 211903](https://github.com/user-attachments/assets/a645f6f0-1f61-4f8f-a9c1-70252f9628a7)
+
+Bisa dilihat bahwa angka permintaan sepeda mengalami kenaikan drastis hingga 2 kali lipat dari tahun 2011 ke tahun 2012.
 
 
 ### Pengaruh Cuaca terhadap Permintaan Sepeda Per hari
