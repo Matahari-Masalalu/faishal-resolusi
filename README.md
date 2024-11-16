@@ -62,21 +62,20 @@ Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteri
 
 Analisis ini menunjukkan bagaimana kondisi cuaca mempengaruhi jumlah permintaan sewa sepeda.
 
-![Pengaruh Cuaca](https://github.com/user-attachments/assets/d7b7567c-b536-4a4f-8cae-107e9ff0f6d8)
+![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
 
 ### Tren Musiman dalam Penggunaan Sepeda
 
 Pola penggunaan sepeda berdasarkan musim memberikan pemahaman tentang kapan permintaan sewa sepeda meningkat atau menurun.
 
-![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
+![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/105c236c-6430-4e8d-a424-4369e6e44a74)
 
 
 ### Pengaruh Hari Libur
 
 Analisis menunjukkan perbandingan permintaan sewa sepeda pada hari libur dan hari biasa.
 
-![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/105c236c-6430-4e8d-a424-4369e6e44a74)
-
+![Cuplikan layar 2024-11-16 145301](https://github.com/user-attachments/assets/004aafd6-f54e-456e-af1f-be04f547a33f)
 
 ## Data Preparation
 
