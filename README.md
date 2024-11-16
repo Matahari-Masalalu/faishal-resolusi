@@ -60,50 +60,39 @@ Analisis jumlah total sewa sepeda berdasarkan faktor waktu, cuaca, dan karakteri
 
 ### Pengaruh Cuaca terhadap Permintaan Sepeda
 
-Analisis ini menunjukkan bagaimana kondisi cuaca mempengaruhi jumlah permintaan sewa sepeda.
-
 ![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
+
+Analisis menunjukkan bahwa rata-rata permintaan sepeda mengalami peningkatan yang signifikan pada hari-hari dengan cuaca cerah. Hal ini dapat dijelaskan oleh kenyataan bahwa cuaca yang baik, seperti sinar matahari dan suhu yang nyaman, mendorong orang untuk beraktivitas di luar ruangan. Ketika cuaca cerah, banyak individu merasa lebih termotivasi untuk menggunakan sepeda sebagai sarana transportasi atau rekreasi. Selain itu, kondisi cuaca yang baik juga meningkatkan pengalaman berkendara, menjadikannya lebih menyenangkan dan nyaman. Sebaliknya, pada hari-hari dengan cuaca buruk, seperti hujan atau suhu yang sangat dingin, permintaan sewa sepeda cenderung menurun. Hal ini menunjukkan bahwa penyedia layanan bike sharing perlu mempertimbangkan faktor cuaca dalam perencanaan dan pengelolaan armada sepeda mereka, serta dalam penawaran promosi untuk menarik pengguna saat cuaca baik.
 
 ### Tren Musiman dalam Penggunaan Sepeda
 
-Pola penggunaan sepeda berdasarkan musim memberikan pemahaman tentang kapan permintaan sewa sepeda meningkat atau menurun.
-
 ![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/105c236c-6430-4e8d-a424-4369e6e44a74)
+
+Dalam analisis musiman, ditemukan bahwa permintaan sepeda tidak menunjukkan pola yang signifikan berdasarkan musim. Meskipun ada kecenderungan untuk bersepeda lebih banyak pada musim tertentu, data menunjukkan bahwa variasi dalam permintaan sewa sepeda antara musim semi, panas, gugur, dan dingin tidak cukup mencolok untuk diidentifikasi sebagai pengaruh yang signifikan.
 
 
 ### Pengaruh Hari Libur
 
-Analisis menunjukkan perbandingan permintaan sewa sepeda pada hari libur dan hari biasa.
-
 ![Cuplikan layar 2024-11-16 145301](https://github.com/user-attachments/assets/004aafd6-f54e-456e-af1f-be04f547a33f)
 
-## Data Preparation
+Hasil analisis menunjukkan bahwa penggunaan sepeda cenderung lebih tinggi pada hari-hari yang bukan hari libur. Ini mungkin disebabkan oleh fakta bahwa pada hari kerja, banyak orang yang menggunakan sepeda sebagai sarana transportasi untuk pergi ke tempat kerja atau sekolah. Dalam konteks ini, sepeda menjadi pilihan yang efisien dan ramah lingkungan. Sebaliknya, pada hari libur, meskipun ada kemungkinan untuk bersepeda sebagai kegiatan rekreasi, banyak orang memilih untuk melakukan aktivitas lain, seperti berkumpul dengan keluarga atau berlibur, yang dapat mengurangi minat mereka untuk menyewa sepeda. Oleh karena itu, penyedia layanan sepeda dapat mempertimbangkan untuk menawarkan promosi khusus pada hari kerja atau mengembangkan program yang mendorong penggunaan sepeda selama hari libur, seperti acara komunitas atau perlombaan sepeda, untuk meningkatkan partisipasi.
 
-Proses data preparation pada proyek ini terdiri dari beberapa tahapan:
+### Perbandingan Penggunaan Sepeda oleh Pengguna Terdaftar dan Kasual
 
-### Data Cleaning
+![Cuplikan layar 2024-11-16 145342](https://github.com/user-attachments/assets/e78e45ff-ba7b-4619-90bd-1a1c11946a4e)
 
-1. ** Menghapus duplikat dan nilai yang hilang**: Memastikan tidak ada data yang duplikat atau hilang dalam dataset.
-2. **Mengubah tipe data**: Mengonversi kolom `dteday` menjadi format datetime untuk analisis yang lebih baik.
 
-### Data Splitting  
-Dataset dibagi menjadi dua bagian: data untuk analisis dan data untuk visualisasi.
-
-## Modeling
-
-Analisis dilakukan untuk menjawab pertanyaan bisnis yang telah ditentukan, menggunakan visualisasi untuk menggambarkan hasil.
-
-## Evaluation
-
-Hasil analisis menunjukkan bahwa faktor cuaca, musim, dan hari libur memiliki pengaruh signifikan terhadap permintaan sewa sepeda. Data yang diperoleh dapat digunakan untuk meningkatkan layanan bike sharing.
+Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditemukan bahwa pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda. Pengguna terdaftar, yang biasanya merupakan individu yang telah mendaftar untuk menggunakan layanan secara rutin, menunjukkan pola penggunaan yang lebih teratur dan terjadwal. Mereka cenderung menggunakan sepeda untuk perjalanan harian mereka, baik untuk bekerja, berolahraga, maupun aktivitas sehari-hari lainnya. Di sisi lain, pengguna kasual sering kali menggunakan sepeda secara sporadis, mungkin hanya saat mereka berlibur atau dalam situasi tertentu. Hal ini menunjukkan bahwa penyedia layanan sepeda perlu mengembangkan strategi yang berbeda untuk menarik kedua jenis pengguna ini. Misalnya, untuk pengguna terdaftar, mereka dapat menawarkan program loyalitas atau diskon untuk penyewaan jangka panjang, sementara untuk pengguna kasual, mereka bisa menawarkan paket promosi atau pengalaman unik yang mendorong mereka untuk mencoba layanan sepeda lebih sering.
 
 ## Kesimpulan
-Analisis ini memberikan wawasan yang berharga tentang faktor-faktor yang mempengaruhi permintaan sewa sepeda. Dengan memahami pola dan tren ini, penyedia layanan dapat mengoptimalkan operasional dan meningkatkan pengalaman pengguna.
+Analisis ini memberikan wawasan yang berharga tentang berbagai faktor yang mempengaruhi permintaan sewa sepeda. Melalui eksplorasi data yang mendalam, kami telah mengidentifikasi bahwa cuaca, hari kerja, dan karakteristik pengguna berperan penting dalam menentukan pola penggunaan sepeda.
 
-## Download Dataset
-Dataset yang telah dibersihkan dapat diunduh melalui [data_hour.csv](data_hour.csv).
+Meskipun terdapat beberapa asumsi awal tentang pengaruh signifikan dari faktor-faktor musiman, analisis menunjukkan bahwa variasi permintaan sewa sepeda tidak selalu berkorelasi langsung dengan perubahan musim. Ini menunjukkan bahwa pengguna sepeda mungkin lebih fleksibel dan adaptif terhadap kondisi cuaca, serta mengindikasikan bahwa penyedia layanan harus mempertimbangkan faktor-faktor lain yang lebih mempengaruhi keputusan pengguna untuk menyewa sepeda.
 
-## Requirements
-Untuk menjalankan proyek ini, Anda perlu menginstal paket-paket berikut:
-```bash
-pip install numpy pandas matplotlib seaborn
+Selain itu, temuan mengenai perbedaan antara pengguna terdaftar dan pengguna kasual memberikan wawasan penting bagi penyedia layanan. Pengguna terdaftar, yang menunjukkan pola penggunaan yang lebih konsisten, dapat menjadi fokus utama untuk program loyalitas dan penawaran khusus, sementara pengguna kasual dapat dijangkau melalui promosi yang menarik dan acara komunitas yang mendorong partisipasi.
+
+Dengan memahami pola dan tren ini, penyedia layanan sepeda dapat mengoptimalkan operasional mereka dengan lebih baik. Misalnya, mereka dapat menyesuaikan jumlah armada sepeda yang tersedia berdasarkan analisis permintaan yang telah diidentifikasi, serta merencanakan promosi atau acara yang sesuai dengan kebiasaan pengguna.
+
+Selain itu, analisis ini juga menyoroti pentingnya meningkatkan pengalaman pengguna melalui layanan yang lebih responsif dan inovatif. Penyedia layanan dapat mempertimbangkan untuk memperkenalkan fitur-fitur baru, seperti aplikasi mobile yang lebih baik untuk pemesanan dan pelacakan, atau program pendidikan yang mengedukasi pengguna tentang manfaat bersepeda dan cara aman bersepeda di berbagai kondisi.
+
+Secara keseluruhan, hasil dari analisis ini tidak hanya memberikan pemahaman yang lebih dalam tentang faktor-faktor yang mempengaruhi permintaan sewa sepeda, tetapi juga membuka peluang untuk inovasi dan peningkatan layanan yang dapat meningkatkan kepuasan pengguna dan mendorong lebih banyak orang untuk memilih sepeda sebagai pilihan transportasi yang berkelanjutan. Dengan pendekatan yang tepat, penyedia layanan dapat berkontribusi pada pengembangan kota yang lebih ramah lingkungan dan berkelanjutan, sekaligus meningkatkan kesehatan dan kesejahteraan masyarakat.
