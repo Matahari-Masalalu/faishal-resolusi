@@ -92,14 +92,31 @@ Hasil analisis menunjukkan bahwa penggunaan sepeda cenderung lebih tinggi pada h
 
 Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditemukan bahwa pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda. Pengguna terdaftar, yang biasanya merupakan individu yang telah mendaftar untuk menggunakan layanan secara rutin, menunjukkan pola penggunaan yang lebih teratur dan terjadwal. Mereka cenderung menggunakan sepeda untuk perjalanan harian mereka, baik untuk bekerja, berolahraga, maupun aktivitas sehari-hari lainnya. Di sisi lain, pengguna kasual sering kali menggunakan sepeda secara sporadis, mungkin hanya saat mereka berlibur atau dalam situasi tertentu. Hal ini menunjukkan bahwa penyedia layanan sepeda perlu mengembangkan strategi yang berbeda untuk menarik kedua jenis pengguna ini. Misalnya, untuk pengguna terdaftar, mereka dapat menawarkan program loyalitas atau diskon untuk penyewaan jangka panjang, sementara untuk pengguna kasual, mereka bisa menawarkan paket promosi atau pengalaman unik yang mendorong mereka untuk mencoba layanan sepeda lebih sering.
 
-## Penggunaan Dashboard
+# Dasbor Analisis Data Berbagi Sepeda
+
+![Cuplikan layar 2024-11-16 194130](https://github.com/user-attachments/assets/f60b6518-0257-4f79-b703-847a770b881e)
+
+
+Ini adalah proyek analisis data sepeda menggunakan Python dengan dataset "Bike Sharing", yang dapat diakses [di sini](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset) di Kaggle. Proyek ini dilakukan dengan menggunakan Google Colab untuk analisis data dan Streamlit untuk membuat dashboard interaktif.
+
+## Deskripsi Proyek
+
+Proyek ini bertujuan untuk menganalisis data sepeda dan menyajikannya dalam bentuk dashboard interaktif. Analisis data mencakup beberapa aspek, antara lain dampak cuaca buruk terhadap permintaan sepeda, tren musiman penggunaan sepeda, dan pengaruh hari libur terhadap penggunaan sepeda.
+
+## Struktur Folder
+
+- `Streamlit`: Folder utama yang berisi file dashboard.py untuk menghasilkan dasboard Streamlit.
+- `Dataset`: Folder berisi dataset yang digunakan untuk analisis.
+- `Aset`: Folder berisi gambar dan aset lain yang digunakan di dasbor.
+
+## Penggunaan
 
 1. Instal semua dependensi dengan menjalankan perintah berikut: ```pip install pandas matplotlib seaborn streamlit```
 2. Pastikan Anda memiliki kumpulan data "Berbagi Sepeda" yang dapat diakses dari tautan yang disediakan dan simpan di folder `kumpulan data`.
 3. Jalankan aplikasi dengan perintah berikut: ```streamlit run app.py```
 4. Aplikasi akan berjalan di browser Anda, dan Anda dapat mulai menjelajahi analisis data sepeda.
 
-## Fitur Dasboard
+## Fitur Dasbor
 
 - Analisis total penyewaan sepeda per tahun.
 - Analisis dampak cuaca buruk terhadap permintaan sepeda.
