@@ -104,3 +104,9 @@ Dengan memahami pola dan tren ini, penyedia layanan sepeda dapat mengoptimalkan 
 Selain itu, analisis ini juga menyoroti pentingnya meningkatkan pengalaman pengguna melalui layanan yang lebih responsif dan inovatif. Penyedia layanan dapat mempertimbangkan untuk memperkenalkan fitur-fitur baru, seperti aplikasi mobile yang lebih baik untuk pemesanan dan pelacakan, atau program pendidikan yang mengedukasi pengguna tentang manfaat bersepeda dan cara aman bersepeda di berbagai kondisi.
 
 Secara keseluruhan, hasil dari analisis ini tidak hanya memberikan pemahaman yang lebih dalam tentang faktor-faktor yang mempengaruhi permintaan sewa sepeda, tetapi juga membuka peluang untuk inovasi dan peningkatan layanan yang dapat meningkatkan kepuasan pengguna dan mendorong lebih banyak orang untuk memilih sepeda sebagai pilihan transportasi yang berkelanjutan. Dengan pendekatan yang tepat, penyedia layanan dapat berkontribusi pada pengembangan kota yang lebih ramah lingkungan dan berkelanjutan, sekaligus meningkatkan kesehatan dan kesejahteraan masyarakat.
+
+## Referensi
+1. Lakshmipathi N  - Kagle. Diakses pada 16 November 2024 dari (https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset/data)
+2. Eslam Mohamed  - Kagle. Diakses pada 16 November 2024 dari (https://www.kaggle.com/code/eslammohamed100/bike-sharing-prediction)
+
+
