@@ -47,6 +47,14 @@ Variabel-variabel pada dataset adalah sebagai berikut:
 - **registered**: Jumlah pengguna terdaftar.
 - **cnt**: Jumlah total sepeda yang disewakan.
 
+## Data Preparation
+
+Tahap **Data Preparation** adalah langkah penting dalam proses analisis data, di mana data yang telah dikumpulkan disiapkan untuk analisis lebih lanjut. Berikut adalah langkah-langkah yang dilakukan dalam tahap ini:
+
+- Data dikumpulkan dari dua file CSV, yaitu `hour.csv` dan `day.csv`, yang berisi informasi tentang penyewaan sepeda per jam dan per hari. Data dibaca menggunakan pustaka Pandas dan dimasukkan ke dalam DataFrame.
+- Data dibersihkan dengan memperbaiki tipe data untuk atribut dteday, yang awalnya bertipe object, menjadi datetime64. Ini dilakukan untuk memudahkan analisis waktu.
+- Untuk memudahkan analisis dan visualisasi, beberapa kolom diubah menjadi nilai yang lebih deskriptif. Misalnya, nilai numerik untuk season, yr, holiday, dan weathersit diubah menjadi nama yang lebih mudah dipahami.
+
 ## Exploratory Data Analysis
 
 ### Total Volume Sewa Sepeda
