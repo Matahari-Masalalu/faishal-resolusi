@@ -80,27 +80,28 @@ Bisa dilihat bahwa angka permintaan sepeda mengalami kenaikan drastis hingga 2 k
 
 ### Pengaruh Cuaca terhadap Permintaan Sepeda Per hari
 
-![Cuplikan layar 2024-11-16 145136](https://github.com/user-attachments/assets/9724bbf5-c6fa-4837-add3-028479769dd9)
+![Cuplikan layar 2024-12-19 223317](https://github.com/user-attachments/assets/2211dd67-5aa1-4290-ab44-c99c4a3b0ed6)
+
 
 Analisis menunjukkan bahwa rata-rata permintaan sepeda mengalami peningkatan yang signifikan pada hari-hari dengan cuaca cerah. Hal ini dapat dijelaskan oleh kenyataan bahwa cuaca yang baik, seperti sinar matahari dan suhu yang nyaman, mendorong orang untuk beraktivitas di luar ruangan. Ketika cuaca cerah, banyak individu merasa lebih termotivasi untuk menggunakan sepeda sebagai sarana transportasi atau rekreasi. Selain itu, kondisi cuaca yang baik juga meningkatkan pengalaman berkendara, menjadikannya lebih menyenangkan dan nyaman. Sebaliknya, pada hari-hari dengan cuaca buruk, seperti hujan atau suhu yang sangat dingin, permintaan sewa sepeda cenderung menurun. Hal ini menunjukkan bahwa penyedia layanan bike sharing perlu mempertimbangkan faktor cuaca dalam perencanaan dan pengelolaan armada sepeda mereka, serta dalam penawaran promosi untuk menarik pengguna saat cuaca baik.
 
 ### Tren Musiman dalam Penggunaan Sepeda
 
-![Cuplikan layar 2024-11-16 145227](https://github.com/user-attachments/assets/105c236c-6430-4e8d-a424-4369e6e44a74)
+![Cuplikan layar 2024-12-19 223407](https://github.com/user-attachments/assets/3038f967-1722-48f3-b127-7cfb57e82d6d)
+
 
 Dalam analisis musiman, ditemukan bahwa permintaan sepeda tidak menunjukkan pola yang signifikan berdasarkan musim. Meskipun ada kecenderungan untuk bersepeda lebih banyak pada musim tertentu, data menunjukkan bahwa variasi dalam permintaan sewa sepeda antara musim semi, panas, gugur, dan dingin tidak cukup mencolok untuk diidentifikasi sebagai pengaruh yang signifikan.
 
 
 ### Pengaruh Hari Libur
 
-![Cuplikan layar 2024-11-16 145301](https://github.com/user-attachments/assets/004aafd6-f54e-456e-af1f-be04f547a33f)
+![Cuplikan layar 2024-12-19 223438](https://github.com/user-attachments/assets/fcf84e6c-e8cb-4e81-8b08-b0a823ce8d59)
 
 Hasil analisis menunjukkan bahwa penggunaan sepeda cenderung lebih tinggi pada hari-hari yang bukan hari libur. Ini mungkin disebabkan oleh fakta bahwa pada hari kerja, banyak orang yang menggunakan sepeda sebagai sarana transportasi untuk pergi ke tempat kerja atau sekolah. Dalam konteks ini, sepeda menjadi pilihan yang efisien dan ramah lingkungan. Sebaliknya, pada hari libur, meskipun ada kemungkinan untuk bersepeda sebagai kegiatan rekreasi, banyak orang memilih untuk melakukan aktivitas lain, seperti berkumpul dengan keluarga atau berlibur, yang dapat mengurangi minat mereka untuk menyewa sepeda. Oleh karena itu, penyedia layanan sepeda dapat mempertimbangkan untuk menawarkan promosi khusus pada hari kerja atau mengembangkan program yang mendorong penggunaan sepeda selama hari libur, seperti acara komunitas atau perlombaan sepeda, untuk meningkatkan partisipasi.
 
 ### Perbandingan Penggunaan Sepeda oleh Pengguna Terdaftar dan Kasual
 
-![Cuplikan layar 2024-11-16 145342](https://github.com/user-attachments/assets/e78e45ff-ba7b-4619-90bd-1a1c11946a4e)
-
+![Cuplikan layar 2024-12-19 223523](https://github.com/user-attachments/assets/587bd419-fca5-4e57-b1dd-df8a66b010af)
 
 Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditemukan bahwa pengguna terdaftar lebih aktif dan konsisten dalam menyewa sepeda. Pengguna terdaftar, yang biasanya merupakan individu yang telah mendaftar untuk menggunakan layanan secara rutin, menunjukkan pola penggunaan yang lebih teratur dan terjadwal. Mereka cenderung menggunakan sepeda untuk perjalanan harian mereka, baik untuk bekerja, berolahraga, maupun aktivitas sehari-hari lainnya. Di sisi lain, pengguna kasual sering kali menggunakan sepeda secara sporadis, mungkin hanya saat mereka berlibur atau dalam situasi tertentu. Hal ini menunjukkan bahwa penyedia layanan sepeda perlu mengembangkan strategi yang berbeda untuk menarik kedua jenis pengguna ini. Misalnya, untuk pengguna terdaftar, mereka dapat menawarkan program loyalitas atau diskon untuk penyewaan jangka panjang, sementara untuk pengguna kasual, mereka bisa menawarkan paket promosi atau pengalaman unik yang mendorong mereka untuk mencoba layanan sepeda lebih sering.
 
