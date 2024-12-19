@@ -61,11 +61,11 @@ Tahap **Data Preparation** adalah langkah penting dalam proses analisis data, di
 
 Analisis jumlah total sewa sepeda berdasarkan Jam, Hari, Bulan, dan Tahun.
 
-![Cuplikan layar 2024-11-16 211653](https://github.com/user-attachments/assets/787bee62-5459-410b-937d-7bf4619a8bdb)
+![Cuplikan layar 2024-12-19 222613](https://github.com/user-attachments/assets/26597435-ac39-4d00-b840-a76adaaeaf25)
 
 Bisa dilihat bahwa angka permintaan sepeda mengalami penurunan mulai dari jam 00.00 hingga mencapai titik terendah di jam 04.00 dan mencapai puncak permintaan pada jam 17.00.
 
-![Cuplikan layar 2024-11-16 211703](https://github.com/user-attachments/assets/b1934baf-b2b6-4899-a55a-54056f578234) 
+![Cuplikan layar 2024-12-19 222731](https://github.com/user-attachments/assets/026b4a1c-a671-4d13-94d9-d2b2f0754917)
 
 Bisa dilihat bahwa hari tidak mempengaruhi pada angka permintaan sepeda secara signifikan
 
