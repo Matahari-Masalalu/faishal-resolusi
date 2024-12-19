@@ -69,11 +69,11 @@ Bisa dilihat bahwa angka permintaan sepeda mengalami penurunan mulai dari jam 00
 
 Bisa dilihat bahwa hari tidak mempengaruhi pada angka permintaan sepeda secara signifikan
 
-![Cuplikan layar 2024-11-16 211717](https://github.com/user-attachments/assets/416c0c10-f718-41a8-b108-6f24020d604e)
+![Cuplikan layar 2024-12-19 222844](https://github.com/user-attachments/assets/6ab6dc1e-7e13-45b4-9fb5-ae564fc37aa0)
 
 Bisa dilihat bahwa angka permintaan sepeda mengalami penurunan mulai dari bulan Agustus hingga mencapai titik terendah di bulan Januari
 
-![Cuplikan layar 2024-11-16 211903](https://github.com/user-attachments/assets/a645f6f0-1f61-4f8f-a9c1-70252f9628a7)
+![Cuplikan layar 2024-12-19 222942](https://github.com/user-attachments/assets/3a89896f-e64a-48ee-a7bb-2eeeee96cf5e)
 
 Bisa dilihat bahwa angka permintaan sepeda mengalami kenaikan drastis hingga 2 kali lipat dari tahun 2011 ke tahun 2012.
 
