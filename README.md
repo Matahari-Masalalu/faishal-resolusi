@@ -110,7 +110,7 @@ Dalam analisis perbandingan antara pengguna terdaftar dan pengguna kasual, ditem
 ![Cuplikan layar 2024-11-16 194130](https://github.com/user-attachments/assets/f60b6518-0257-4f79-b703-847a770b881e)
 
 
-Ini adalah proyek analisis data sepeda menggunakan Python dengan dataset "Bike Sharing", yang dapat diakses [di sini](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset) di Kaggle. Proyek ini dilakukan dengan menggunakan Google Colab untuk analisis data dan Streamlit untuk membuat dashboard interaktif.
+Ini adalah proyek analisis data sepeda menggunakan Python yang bisa diakses [di sini]([https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset](https://kvjm374ffckfuewbtpvjn2.streamlit.app/)) dengan dataset "Bike Sharing", yang dapat diakses [di sini](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset) di Kaggle. Proyek ini dilakukan dengan menggunakan Google Colab untuk analisis data dan Streamlit untuk membuat dashboard interaktif.
 
 ## Deskripsi Proyek
 
